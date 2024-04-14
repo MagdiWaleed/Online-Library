@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowed Books - Rome Library</title>
+    <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
+   
+    <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
+  <link rel="stylesheet" href="/style/dimension.css">
+  <link rel="stylesheet" href="/style/footer.css">
+  <link rel="stylesheet" href="/style/text.css">
+  <link rel="stylesheet" href="/style/navigation.css">
+  <link rel="stylesheet" href="/style/buttons.css">
+  <link rel="stylesheet" href="/style/textfield.css">
+  <script src="/script/navigation.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="backGround_image" >
+        <!-- <img src="/references/images/Logo.png" alt=""> -->
+          <div id="backGround" class="borders">
+            <img id="project_logo" src="/references/images/Logo.png" alt="" onclick="navigateToPage('/admin/about/about.html')">
+            <h1>
+              R O M E
+            </h1>
+            <img id="account_logo" src="/references/images/R.png" alt="" onclick="navigateToPage('/admin/my_information/my_information.html')">
+          </div>
+          <div id="black_line"></div>
+          <div id="navigation_bar" class="borders">
+            <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
+            <button style="border-radius: 0 0 0 0;" id="selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
+              <pre>B R R O W E D 
+B O O K S</pre>
+            </button>
+            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
+            <pre>  A D D  N E W  
+B O O K</pre> 
+             </button>
+             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
+            </div>  
+      </div>
+    </header>
+<main>
+    <h1>Borrowed Books</h1>
+    <table border="1">
+        <tr>
+            <th>Book name</th>
+            <th>Category</th>
+            <th>Book author</th>
+            <th>Borrowed by</th>
+            <th>Borrowed date</th>
+        </tr>
+        <tr>
+            <td>how to win friends</td>
+            <td>self-develop</td>
+            <td>Dial C</td>
+            <td>Magdi </td>
+            <td>10/2/2022</td>
+        </tr>
+    </table>
+</main>
+<footer class="borders">
+  <div class="faq">
+      <h4>FAQ</h4>
+     </div>
+     <h5>What is Rome library?</h5>
+     <p> it's a library that has a wide variety of books</p>
+  <div class="contact-links">
+    <a href="#">Contact Us</a>
+    <a href="#">Support</a>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2024 Rome Library</p>
+  </div>
+</footer>
+    
+</body>
+</html>
