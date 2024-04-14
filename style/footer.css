@@ -1,0 +1,9 @@
+footer{
+    background-color: #D3C3A9;
+    padding: 20px;
+    border-radius: 8px;
+}
+footer *{
+    height: 30px;
+    font-weight: 600;  
+}
