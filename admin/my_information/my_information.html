@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Rome Library</title>
+    <title>My info - Rome Library</title>
     <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
-  
+     
     <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
   <link rel="stylesheet" href="/style/dimension.css">
   <link rel="stylesheet" href="/style/footer.css">
@@ -28,24 +28,38 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
+            <button id="selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
               <pre>B R R O W E D 
 B O O K S</pre>
             </button>
-            <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
+            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
             <pre>  A D D  N E W  
 B O O K</pre> 
              </button>
-             <button style="border-radius: 0 0 50px 0;" id="selected_page_button"  onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
-            </div>  
+            <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
+          </div>  
       </div>
     </header>
-  <main>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores itaque, architecto sit saepe repellendus vitae id quibusdam recusandae enim impedit suscipit ea. Eius ab rerum autem delectus consequatur error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi, quaerat libero corporis quasi praesentium veritatis fuga, est eos nesciunt aliquid pariatur expedita facilis omnis laboriosam ullam quos quas dignissimos. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat et autem recusandae ducimus, fugit dolor repudiandae consequuntur nemo maiores pariatur nihil deleniti perspiciatis hic? Officiis unde minus placeat maiores doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, harum beatae! Ipsam, quibusdam. Fuga cum suscipit optio, aliquam nulla pariatur itaque, veritatis soluta blanditiis enim, quo libero aut vitae obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo libero fugiat quasi possimus deleniti, eveniet, a repellendus sequi tempore eius ab saepe consectetur doloremque quis! Nulla corporis quod fugit.</p>
 
-  </main>    
-
+    <main>
+    <form action="" method="">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="username">Email:</label><br>
+        <input type="email" id="email" name="username" required><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+    
+        <input type="submit" value="Save change">
+        <input type="submit" value="Delete my account">
+    </form>
+    <a href="/login/login/loginScreen.html"><button>Log Out</button></a>
+</main>
     <footer class="borders">
         <div class="faq">
             <h4>FAQ</h4>
@@ -60,6 +74,6 @@ B O O K</pre>
           <p>&copy; 2024 Rome Library</p>
         </div>
       </footer>
-
-</body>
+          
+    </body>
 </html>
