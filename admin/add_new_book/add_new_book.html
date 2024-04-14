@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/style/navigation.css">
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
+  <link rel="stylesheet" href="add_new_book_style.css">
   <script src="/script/navigation.js"></script>
   </head>
   <body>
@@ -41,14 +42,30 @@ B O O K</pre>
             </div>  
       </div>
     </header>
-          <main>
-        <form action="/admin/main/mainScreen.html">
-            <label for=""> Book name:</label>  <input type="text" placeholder="name"><br>
-             <label for="">Book author:</label> <input type="text" placeholder="author"><br>
-              <label for="">Description:</label><textarea name="Description" id="" cols="30" rows="10"></textarea><br>
-              <button>Add the book</button>
-          </form>
-         <a href="/admin/main/mainScreen.html"><button>Cancel</button></a> 
+          <main><div style="height: 15px;"></div>
+            <h1>Enter The New Book Details:</h1>
+            <main><div style="height: 15px;"></div>
+          <form action="/admin/main/main.html" id="add_new_book_form">
+          <div class="row">
+          <div class="column">
+            <div class="text_textfield" >  <label for="" > Book name:</label>  <input type="text" placeholder="name"><br></div>
+          <div style="height: 5px;"></div>
+          <div class="text_textfield">  <label for="" >Book author:</label> <input type="text" placeholder="author"><br></div>
+          <div style="height: 5px;"></div>
+          <div class="text_textfield">   <label for="" style="margin-bottom:auto;" >Description:</label><textarea name="Description" id="" cols="30" rows="10" ></textarea><br></div>
+          <div style="height: 10px;"></div> 
+          <button class="normal_button delete_button" onclick="navigateToPage('admin/main/main.html')" >Delete</button>
+          </div>
+          <div style="width: 5px;"></div>
+          <div class="column" style="max-width: 110px; margin-right: 5%;">
+              <button class="normal_button" onclick="navigateToPage('admin/main/main.html')" style=" height: 71px;">Add image</button> 
+              <div style="margin-top: auto;"></div>
+              <button class="normal_button">Create/Edit</button>
+              <div style="height: 10px;"></div>
+              <button class="normal_button">Cancel</button>
+            </div>
+          </div>
+</form>
       
       </main>
       <footer class="borders">

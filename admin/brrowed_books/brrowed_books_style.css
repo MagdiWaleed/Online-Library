@@ -1,0 +1,75 @@
+#search_card{
+    background-color: #D3C3A9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px black solid;
+    box-shadow:0 2px 6px ;
+}
+#search_card .normal_button{
+    color: white;
+    background-color:#8d7958;
+    width: 200px; 
+    margin-left: auto; 
+    font-weight: bold;
+    font-size: 15px;
+}
+#search_card .normal_button:hover{
+   background-color: #524634;
+}
+#search_card input[type="text"]{
+    height: 20px;
+}
+
+#table_background{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+#table_body{
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px ;
+    
+}
+#table_body th div,#table_body td div{
+    flex-direction: column;
+    height: 50px;
+    border: 0.1px black solid;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    font-weight: bold;
+    
+    transition: all 200ms;
+}
+
+#table_body th div{
+    border-radius:8px 8px 0 0;
+    background:  linear-gradient(to bottom, #D3C3A9, #524634);
+    color: white;
+    
+}
+
+#table_body tr.odd{
+    background-color:   #D3C3A9;
+    
+}
+
+#table_body tr.even{
+    background-color:   #BEA782;
+}
+
+#table_body tr:hover td div{
+    cursor: pointer;
+    background-color: #836c4c;
+    color: white;
+    
+}
