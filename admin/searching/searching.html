@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/style/navigation.css">
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
+  <link rel="stylesheet" href="/style/search_card.css">
   <script src="/script/navigation.js"></script>
   </head>
   <body>
@@ -28,7 +29,7 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button id="selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
+            <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
               <pre>B R R O W E D 
 B O O K S</pre>
@@ -42,9 +43,17 @@ B O O K</pre>
       </div>
     </header>
       <main>
-    <form action="">
+        
+  <div style="height: 20px;"></div>
+  <h1>Searching...</h1>
+  <div style="height: 20px;"></div>
+    <form action="/admin/searching/searching.html">
+      <div id="search_card">
         <input type="text" id="search" name="search" placeholder="Search books, genres, artists...">
-        <input type="submit" value="Search">
+        <div style="height: 10px;"></div>
+        <button class="normal_button" >search</button>
+      </div>
+      <div style="height: 20px;"></div>
     </form>
     <ul>
        <a href="/admin//singleBook/singleBookScreen.html"> <li>Book1</li> </a>

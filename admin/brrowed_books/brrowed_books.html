@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
   <link rel="stylesheet" href="/admin/brrowed_books/brrowed_books_style.css">
+  <link rel="stylesheet" href="/style/search_card.css">
   <script src="/script/navigation.js"></script>
   </head>
   <body>
@@ -43,15 +44,16 @@ B O O K</pre>
       </div>
     </header>
 <main>
-  <div style="height: 10px;"></div>
+  <div style="height: 25px;"></div>
     <h1>Borrowed Books</h1>
-    <div style="height: 10px;"></div>
-
-    <div id="search_card">
-      <input type="text">
-      <div style="height: 10px;"></div>
-      <button class="normal_button" >search</button>
-    </div>
+    <div style="height: 20px;"></div>
+    <form action="/admin/searching/searching.html">
+      <div id="search_card">
+        <input type="text" id="search" name="search" placeholder="Search books, genres, artists...">
+        <div style="height: 10px;"></div>
+        <button class="normal_button" onclick="navigateToPage('/admin/searching/searching.html')">search</button>
+      </div>
+    </form>
     <div style="height: 20px;"></div>
     <div id="table_background">
     <table id="table_body" >
