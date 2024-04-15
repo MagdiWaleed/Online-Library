@@ -1,4 +1,4 @@
-.book-details {
+.book_details {
   display: flex;  
   align-items: center;
   flex-direction: column;
@@ -10,12 +10,12 @@
   margin: 10px;
 }
 
-.book-image {
+.book_image {
   width: 170px;
   height: 200px;
 }
 
-.book-image:hover{
+.book_image:hover{
     border: 3px rgb(43, 41, 41) solid;
     cursor: pointer;
   }
@@ -25,7 +25,7 @@
   grid-template-columns: repeat(4,auto);
 }
 
-.borrowed-books {
+.borrowed_books {
     position: absolute;
     transform: translate(0%, -11.5%);
     background-color: rgba(0, 0, 0, 0.5);
