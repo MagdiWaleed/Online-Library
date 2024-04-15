@@ -1,0 +1,41 @@
+.book-details {
+  display: flex;  
+  align-items: center;
+  flex-direction: column;
+  background-color: #D3C3A9; 
+  border-radius: 3px; 
+  padding: 20px; 
+  width: 160px;
+  height: 220px;
+  margin: 10px;
+}
+
+.book-image {
+  width: 170px;
+  height: 200px;
+}
+
+.book-image:hover{
+    border: 3px rgb(43, 41, 41) solid;
+    cursor: pointer;
+  }
+
+.bookshelves {
+    display: grid;
+  grid-template-columns: repeat(4,auto);
+}
+
+.borrowed-books {
+    position: absolute;
+    transform: translate(0%, -11.5%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px; 
+    width: 160px;
+    height: 220px;
+    margin: 10px;
+}
+
+.BORROWED {
+    padding: 40px; 
+    color : white ;
+}
