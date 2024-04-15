@@ -1,0 +1,10 @@
+.search_header {
+
+    border-radius: 10px; 
+    padding: 30px;
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+    background-color: #D3C3A9; 
+    margin: 20px;
+}
