@@ -1,0 +1,42 @@
+.book_dis{
+    display: flex;
+    background-color:#D3C3A9; 
+    border-radius: 10px; 
+    padding: 20px; 
+
+
+}
+.book_img {
+    width: 800px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 2px;
+    margin-right: 40px;
+    border: #151514 solid;
+}
+.rating {
+    font-size: 24px;
+  }
+  
+.star {
+    color: gold;
+  }
+
+.author_details {
+
+    display: flex;
+    background-color: #D3C3A9; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 840px;
+    height: 150px;
+    margin: 10px;
+    border: 1px #151514 solid;
+}
+
+.author_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin-right: 40px;
+}

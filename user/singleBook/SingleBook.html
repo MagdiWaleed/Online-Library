@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="/style/text.css">
     <link rel="stylesheet" href="/style/navigation.css">
     <link rel="stylesheet" href="/style/buttons.css">
-    <link rel="stylesheet" href="/style/textfield.css">
+    <link rel="stylesheet" href="/user/singleBook/SingleBook.css">
+    <link rel="stylesheet" href="/style/books.css">
     <script src="/script/navigation.js"></script>
   
   </head>
@@ -35,18 +36,81 @@
           </div>  
       </div>
     </header>
-    
+    <div style="height: 50px;"></div>
   
       <main>
-        <div class="book-details">
-          <h2>X Book</h2>
-          <p>By: Author Name</p>
-          <img src="/references/images/default-book-cover.jpg" alt="X Book Cover">
-          <p>Description of the book will be put here in the final version.</p>
-          <button class="normal_button">Borrow/Remove</button>
-          
-        </div>
-        <div style="height: 100px;"></div>
+          <div >
+            <h1>Book Title</h1>
+            <h4>By: Author Name</h4>
+          </div>
+          <div style="height: 10px;"></div>
+          <div class="book_dis">
+          <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
+            <div>
+              <div class="rating" style="height: 70px;">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+              </div>
+              <h2 style="height: 50px;">Discription :</h2>
+              <p>
+                In the heart of a bustling city lies a hidden garden,
+                shrouded in mystery and secrets. Within its walls, a
+                forgotten manuscript is discovered, its pages
+                whispering tales of love, betrayal, and redemption.
+                As the story unfolds, intertwined destinies emerge,
+                weaving a tapestry of past and present. Join the
+                journey of discovery as characters navigate the
+                labyrinth of their own desires and unearth the
+                buried truths that lie dormant within.
+              </p>
+            </div>
+          </div>
+          <div style="height: 20px;"></div>
+
+          <div class="author_details">
+              <div class="author_img">
+                <img src="/references/images/R.png" alt="" class="author_img">
+              </div>
+              <div>
+                <h3 style="height: 40px;">Author Name</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac augue nec tortor molestie tempus. Sed ultricies justo id nibh condimentum, sit amet rutrum lectus lobortis. Quisque nec odio vitae eros suscipit dapibus. Nulla facilisi. Aenean eget ipsum nec libero pharetra placerat. Duis in felis a est aliquam convallis.
+                </p>
+              </div>
+              
+          </div>
+       <div style="height: 20px;"></div>
+          <div>
+          <button class="normal_button" style="width: 400px;">Borrow/Remove</button>
+          </div>
+        <div style="height: 80px;"></div>
+        <h1 style="height: 40px;">Recommended Books :</h1>
+              
+        <div class="bookshelves">   
+          <div class="book_details">
+           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
+           <h4>Book Title</h4>
+           <p>By: Author Name</p>
+          </div>  
+          <div class="book_details">
+           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
+           <h4>Book Title</h4>
+           <p>By: Author Name</p>
+          </div>
+          <div class="book_details">
+           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
+           <h4>Book Title</h4>
+           <p>By: Author Name</p>
+          </div>  
+          <div class="book_details">
+           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
+           <h4>Book Title</h4>
+           <p>By: Author Name</p>
+          </div>
+          <div style="height: 30px;"></div>
       </main>
 
    
