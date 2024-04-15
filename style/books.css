@@ -4,15 +4,31 @@
   flex-direction: column;
   background-color: #D3C3A9; 
   border-radius: 3px; 
-  padding: 20px; 
+  padding: 12px; 
   width: 160px;
-  height: 220px;
-  margin: 10px;
+  
+  margin-right: 8px;
+  border: 1px black solid;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
+.book_details h4{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.book_details p{
+  color: #7A7A7A;
+  font-size: 11px;
+}
+
+
 .book_image {
+  border-radius: 3px;
   width: 170px;
-  height: 200px;
+  height: 250px;
 }
 
 .book_image:hover{
