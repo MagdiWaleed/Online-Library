@@ -45,16 +45,18 @@ B O O K</pre>
           <main><div style="height: 25px;"></div>
             <h1>Enter The New Book Details:</h1>
             <div style="height: 25px;"></div>
-          <form action="/admin/main/main.html" id="add_new_book_form">
+          <div id="add_new_book_form">
           <div class="row">
           <div class="column">
-            <div class="text_textfield" >  <label for="" > Book name:</label>  <input type="text" placeholder="name"><br></div>
+            <div class="text_textfield" >  <label for="" > Book name:</label>  <input type="text" id="input_book_name" placeholder="name"><br></div>
           <div style="height: 5px;"></div>
-          <div class="text_textfield">  <label for="" >Book author:</label> <input type="text" placeholder="author"><br></div>
+          <div class="text_textfield">  <label for="" >Book author:</label> <input type="text" id="input_author_name" placeholder="author"><br></div>
           <div style="height: 5px;"></div>
-          <div class="text_textfield">   <label for="" style="margin-bottom:auto;" >Description:</label><textarea name="Description" id="" cols="30" rows="10" ></textarea><br></div>
+          <div class="text_textfield">   <label for="" style="margin-bottom:auto;" >Description:</label><textarea name="Description" id="input_description" cols="30" rows="10" ></textarea><br></div>
           <div style="height: 10px;"></div> 
-          <button class="normal_button" onclick="navigateToPage('admin/main/main.html')" >Create</button>
+          <div class="text_textfield">   <label for="" style="margin-bottom:auto;" >About Author:</label><textarea name="Description" id="input_about_author" cols="30" rows="10" ></textarea><br></div>
+          <div style="height: 10px;"></div> 
+          <button class="normal_button">Create</button>
           </div>
           <div style="width: 5px;"></div>
           <div class="column" style="max-width: 110px; margin-right: 5%;">
@@ -65,8 +67,12 @@ B O O K</pre>
               <button class="normal_button">Cancel</button>
             </div>
           </div>
-</form>
-      
+          </div>
+          <h1 id="book_name"></h1>
+          <h1 id="author_name"></h1>
+          <h1 id="description"></h1>
+          <h1 id="about_author"></h1>
+          <script src="/admin/add_new_book/add_new_book_script.js"></script>
       </main>
       <footer class="borders">
         <div class="faq">
