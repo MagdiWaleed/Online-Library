@@ -1,10 +1,38 @@
 .search_header {
-
     border-radius: 10px; 
     padding: 30px;
     display: flex;  
     align-items: center;
     flex-direction: column;
-    background-color: #D3C3A9; 
     margin: 20px;
+}
+
+.hero-class {
+    position: relative; /* Ensure positioning context for overlay */
+    display: flex;
+    flex-direction: column; /* Align child elements in a column */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background-image: url('/references/images/wallpaper.jpg');
+    background-size: cover;
+}
+
+.hero-class::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-class > div {
+    position: relative; 
+    z-index: 1; 
 }

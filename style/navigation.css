@@ -14,22 +14,53 @@
     border-radius: 100px;
     border: 3px #D3C3A9 solid;
     transition: all 300ms;
+    -webkit-mask-image: linear-gradient(45deg, #000 25%, rgba(0, 0, 0, .2) 50%, #000 75%);
+    mask-image: linear-gradient(45deg, #000 25%, rgba(0, 0, 0, .2) 50%, #000 75%);
+    -webkit-mask-size: 800%;
+    mask-size: 800%;
+    -webkit-mask-position: 0;
+    mask-position: 0;
 }
-#backGround img:hover{
+#project_logo{
+    border-radius: 0px;
+}
+#rome {
+    animation: myAnim 3s ease 0s 1 normal forwards;
+  }
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+#backGround #account_logo:hover{
     border: 3px white solid;
+    cursor: pointer;
+}
+
+#backGround #project_logo:hover{
+    transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+    -webkit-mask-position: 120%;
+    mask-position: 120%;
+    opacity: 1;
     cursor: pointer;
 }
 
 #backGround #project_logo{
     height: 100px;
-    transform: rotate(-20deg);
-    margin-left: 20px;
+    border-radius: 0px;
+    margin-left: 10px;
     display: inline-block;
     margin-bottom: 20px;
 }
 #backGround #account_logo{
     height: 90px;
-    margin-right: 20px;
+    margin-right: 10px;
 
 }
 #backGround >h1{
@@ -80,6 +111,7 @@ margin-right: 50px;
     border-bottom: 2px white solid;
     transition: all 100ms;
 }
+
 
 
 
