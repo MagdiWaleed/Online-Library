@@ -7,12 +7,17 @@
     <link rel="icon" type="image/png" href="/images/favicon2.png" href>
 
     <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
     <link rel="stylesheet" href="/style/dimension.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/text.css">
     <link rel="stylesheet" href="/style/navigation.css">
     <link rel="stylesheet" href="/style/buttons.css">
-    <link rel="stylesheet" href="/user/singleBook/SingleBook.css">
+    <link rel="stylesheet" href="/user/singleBook/SingleBookStyle.css">
     <link rel="stylesheet" href="/style/books.css">
     <script src="/script/navigation.js"></script>
   
@@ -30,7 +35,7 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button style="border-radius: 0 0 0 50px;"id="selected_page_button" onclick="navigateToPage('/user/main/main.html')">H O M E</button>
+            <button style="border-radius: 0 0 0 50px;" class="not_selected_page_button" onclick="navigateToPage('/user/main/main.html')">H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/user/my_books/my_books.html')">M Y  B O O K S</button>
             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/user/about/about.html')">A B O U T</button>  
           </div>  
@@ -39,23 +44,27 @@
     <div style="height: 50px;"></div>
   
       <main>
-          <div >
-            <h1>Book Title</h1>
-            <h4>By: Author Name</h4>
-          </div>
+         
+            <h2>The SubTle Art of Not Giving A </h2>
+            <div style="height: 5px;"></div>
+            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal;"> Author Name</span></h3>
+        
           <div style="height: 10px;"></div>
           <div class="book_dis">
           <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
             <div>
-              <div class="rating" style="height: 70px;">
+              <div style="display: flex; justify-content: right;">
+              <div class="rating">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span>&#9734;</span>
                 <span>&#9734;</span>
               </div>
-              <h2 style="height: 50px;">Discription :</h2>
-              <p>
+            </div>
+              <h2>Discription:</h2>
+              <div style="height: 20px;"></div>
+              <p class="discription_p">
                 In the heart of a bustling city lies a hidden garden,
                 shrouded in mystery and secrets. Within its walls, a
                 forgotten manuscript is discovered, its pages
@@ -75,7 +84,8 @@
                 <img src="/references/images/R.png" alt="" class="author_img">
               </div>
               <div>
-                <h3 style="height: 40px;">Author Name</h3>
+                <h2>Author Name:</h2>
+                <div style="height: 20px;"></div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac augue nec tortor molestie tempus. Sed ultricies justo id nibh condimentum, sit amet rutrum lectus lobortis. Quisque nec odio vitae eros suscipit dapibus. Nulla facilisi. Aenean eget ipsum nec libero pharetra placerat. Duis in felis a est aliquam convallis.
                 </p>
@@ -84,9 +94,11 @@
           </div>
        <div style="height: 20px;"></div>
           <div>
+            <div style=" display: flex; justify-content: right;">
           <button class="normal_button" style="width: 400px;">Borrow/Remove</button>
-          </div>
-        <div style="height: 80px;"></div>
+        </div>
+        </div>
+        <div style="height: 20px;"></div>
         <h1 style="height: 40px;">Recommended Books :</h1>
               
         <div class="bookshelves">   
