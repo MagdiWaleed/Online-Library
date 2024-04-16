@@ -24,7 +24,6 @@
     
     transition: all 200ms;
 }
-
 #table_body th div{
     border-radius:8px 8px 0 0;
     background:  linear-gradient(to bottom, #D3C3A9, #524634);

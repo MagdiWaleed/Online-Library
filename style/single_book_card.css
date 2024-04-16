@@ -19,17 +19,17 @@
 
 }
 .description_p{
-    text-align: center;
-    width: 480px;
+    text-align:left;
+    width: 450px;
 }
 
 .book_img {
     width: 800px;
-    height: 500px;
-    padding: 8px;
-    border-radius: 2px;
+    height: 600px;
+    padding: 2px;
+    border-radius: 8px;
     margin-right: 10px;
-    border: #151514 solid;
+    border: 1px #151514 solid;
 }
   
 .author_details {
