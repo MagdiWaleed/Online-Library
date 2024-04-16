@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(Book Name) - Rome Library</title>
-    <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
     <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
   <link rel="stylesheet" href="/style/dimension.css">
   <link rel="stylesheet" href="/style/footer.css">
@@ -13,6 +15,8 @@
   <link rel="stylesheet" href="/style/navigation.css">
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
+  <link rel="stylesheet" href="single_book_style.css">
+  <link rel="stylesheet" href="/style/single_book_card.css">
   <script src="/script/navigation.js"></script>
   </head>
   <body>
@@ -28,7 +32,7 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button id="selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
+            <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
               <pre>B R R O W E D 
 B O O K S</pre>
@@ -42,14 +46,40 @@ B O O K</pre>
       </div>
     </header>
 <main>
-<h2>(Book Name)</h2>
-<p>By: Author Name</p>
-<img src="/references/images/default-book-cover.jpg" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus vitae quis asperiores molestiae porro ducimus dolore repudiandae excepturi, cupiditate assumenda at culpa exercitationem repellendus possimus aperiam laboriosam! Illum, voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quisquam animi sit odit a ab blanditiis quasi natus porro quos impedit, veniam at soluta dolores omnis quas maxime minima laborum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora laudantium, sint ducimus laboriosam sapiente dolorum, cumque, excepturi voluptate dolores blanditiis quod laborum officiis dolorem magni necessitatibus consequatur perferendis accusamus et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur deleniti quasi sapiente, ullam qui nisi ad omnis aperiam vel incidunt magnam culpa error aspernatur iusto facilis! Animi placeat doloribus commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea molestias sed, voluptates porro repudiandae autem delectus voluptate excepturi neque soluta. Odit adipisci fugiat totam obcaecati voluptates repellendus dolore numquam.
-</p>
-<h3>Borrowed By: (User name)</h3>
-<a href="editSingleBook/editSingleBookScreen.html"><button>Edit this book</button></a>
 
+  <div class="book_title"> 
+    <h2 class="book_name">[book name] </h2>
+    <div style="height: 5px;"></div>
+    <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal; font-size: 14px;"> <h3  style="display: inline;">[Author Name]</h3></span></h3>
+  </div>
+  <div style="height: 10px;"></div>
+  <div class="book_dis">
+  <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
+    <div style="margin-top: 30px;">
+      <h2 >Discription:</h2>
+      <div style="height: 20px;"></div>
+      <p class="description_p" id="description">
+      </div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+
+  <div class="author_details">
+      <div class="author_img">
+        <img src="/references/images/R.png" alt="" class="author_img">
+      </div>
+      <div>
+        <h2>About author:</h2>
+        <div style="height: 20px;"></div>
+        <p id="about_author">
+        </p>
+      </div>
+  </div>
+  
+<div style="display: flex; justify-content: right;">
+  <button class="normal_button edit_button " style="margin-top: 20px;" > Edit this book</button>
+</div>
+<div style="height: 20px;"></div>
 </main>
 <footer>
     <div class="faq">

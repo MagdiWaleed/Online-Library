@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search - Rome Library</title>
-    <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   
     <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
   <link rel="stylesheet" href="/style/dimension.css">
@@ -14,6 +16,7 @@
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
   <link rel="stylesheet" href="/style/search_card.css">
+  <link rel="stylesheet" href="/style/books.css">
   <script src="/script/navigation.js"></script>
   </head>
   <body>
@@ -55,15 +58,121 @@ B O O K</pre>
       </div>
       <div style="height: 20px;"></div>
     </form>
-    <ul>
-       <a href="/admin//singleBook/singleBookScreen.html"> <li>Book1</li> </a>
-       <a href="/admin//singleBook/singleBookScreen.html"> <li>Book2 <span style="color: gray; display: inline-blockS;">(Borrowed)</span></li> </a>
-       <a href="/admin//singleBook/singleBookScreen.html"> <li>Book3</li> </a>
-       <a href="/admin//singleBook/singleBookScreen.html"> <li>Book4</li> </a>
-       <a href="/admin//singleBook/singleBookScreen.html"> <li>Book5 <span style="color: gray; display: inline-blockS;">(Borrowed)</span></li> </a>
-       <a href="/admin//singleBook/singleBookScreen.html"> <li>Book6</li> </a>
+   
+        
+    <div class="bookshelves">   
+      <div class="book_details" onclick="navigateToPage('/admin/single_book/single_book.html')">
+        <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+        <h4>The Art Of</h4>
+        <p>By: Author Name</p>
+      </div>
+      <div class="book_details" onclick="navigateToPage('/admin/single_book/single_book.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    
+    <div class="book_details" onclick="navigateToPage('/admin/single_book/single_book.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
 
-    </ul>
+      <div class="borrowed_books">
+       <div style="position: relative;">
+         <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image">
+        <h4>Book Title</h4>
+        <p>By: Author Name</p>
+      </div >
+         <h2 class="BORROWED">BORROWED</h2>
+       </div>
+       <div class="book_details" onclick="navigateToPage('/admin/single_book/single_book.html')">
+        <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+        <h4>The Art Of</h4>
+        <p>By: Author Name</p>
+      </div>
+
+        <div class="borrowed_books">
+         <div style="position: relative;">
+           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image">
+          <h4>Book Title</h4>
+          <p>By: Author Name</p>
+        </div >
+           <h2 class="BORROWED">BORROWED</h2>
+         </div>
+  </div>
+<br>
+  <div>
+        
+    <div class="bookshelves">   
+
+      <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="borrowed_books">
+     <div style="position: relative;">
+       <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
+      <h4>Book Title</h4>
+      <p>By: Author Name</p>
+    </div >
+       <h2 class="BORROWED">BORROWED</h2>
+     </div>
+           
+  </div>
+<br>
+  <div>
+        
+    <div class="bookshelves">   
+
+      <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
+      <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
+      <h4>The Art Of</h4>
+      <p>By: Author Name</p>
+    </div>
+    <div class="borrowed_books">
+     <div style="position: relative;">
+       <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
+      <h4>Book Title</h4>
+      <p>By: Author Name</p>
+    </div >
+       <h2 class="BORROWED">BORROWED</h2>
+     </div>
+           
+  </div>
+<br>
+  <div>
 </main>
     <footer>
         <div class="faq">
