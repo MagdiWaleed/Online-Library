@@ -42,12 +42,11 @@ class SingleBookModel{
   // var brrowedBook=" <div class='borrowed_books'><div style='position: relative;'> <img src='/references/images/book.jpg'alt='IMAGE-NOT-FOUND' class='book_image'/><h4>The Art Of</h4><p>By: Author Name</p></div ><h2 class='BORROWED'>BORROWED</h2></div>"
   
   function buildBrrowedBookCard(singleBookData){
-   first_layer="<div class='borrowed_books' onclick=\"navigateToPage('/admin/single_book/single_book.html')\"><div style='position: relative;' >";
-   image_layer="<img src='"+singleBookData.image+"'alt='IMAGE-NOT-FOUND' class='book_image'/>";
-   book_details_layer="<h4>"+singleBookData.book_name+"</h4>"+"<p>By:"+singleBookData.author_name+"</p></div ><h2 class='BORROWED'>BORROWED</h2></div>";
-  return first_layer+image_layer+book_details_layer;
-  }
-  
+    first_layer="<div class='borrowed_books' onclick=\"navigateToPage('/admin/single_book/single_book.html')\"><div style='position: relative;' >";
+    image_layer="<img src='"+singleBookData.image+"'alt='IMAGE-NOT-FOUND' class='book_image'/>";
+    book_details_layer="<h4>"+singleBookData.book_name+"</h4>"+"<p>By:"+singleBookData.author_name+"</p></div ><h2 class='BORROWED'>BORROWED</h2></div>";
+   return first_layer+image_layer+book_details_layer;
+   }
   function getSearchedBooks (numberOfElements){
            bookCardsList="";
           for(i=0;i<numberOfElements;i++){

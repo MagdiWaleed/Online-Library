@@ -10,14 +10,14 @@ class SingleUserAuthorModel{
 }
   
   
-  var rowDetails="  <tr class=\"odd\" onclick=\"navigateToPage('/admin/single_user_author/single_user_author.html')\"><td><div>Magdi waleed mohamed khalaf allah</div></td><td><div>50</div></td></tr>";
+  var rowDetails="  <tr class=\"odd\" onclick=\"WHERE_IM_GOING()\"><td><div>Magdi waleed mohamed khalaf allah</div></td><td><div>50</div></td></tr>";
 
   function buildSingleRow(isEven,singleUserAuthorData){
     backgroundStyle="odd";
     if(isEven){
         backgroundStyle="even";
     }
-   singleRow="<tr class="+backgroundStyle+" onclick=\"navigateToPage('/admin/single_user_author/single_user_author.html')\"><td><div>"+singleUserAuthorData.name+"</div></td><td><div>"+singleUserAuthorData.getNumberOfBooks()+"</div></td></tr>"
+   singleRow="<tr class="+backgroundStyle+" onclick=\"WHERE_IM_GOING()\"><td><div>"+singleUserAuthorData.name+"</div></td><td><div>"+singleUserAuthorData.getNumberOfBooks()+"</div></td></tr>"
     return singleRow;    
 }
 
@@ -40,17 +40,38 @@ class SingleUserAuthorModel{
             console.log(error);
             comingFrom="";
         }
-        
+        console.log(comingFrom);
+        console.log(document.getElementById("owner_text").value)
         if(comingFrom=="show_users_button"){
-            document.getElementById("owner_text").value="Users Brrowed books";
+            document.getElementById("owner_text").innerHTML="Users Brrowed books";
         }
         else if(comingFrom=="show_authors_button"){
-            document.getElementById("owner_text").value="Authors books";
+            document.getElementById("owner_text").innerHTML="Authors books";
         }
         else{
-            document.getElementById("owner_text").value='[some error occur]';   
+            document.getElementById("owner_text").innerHTML='[some error occur]';   
         }
 
+    }
+
+    function WHERE_IM_GOING(){
+        goingToSinlgeMemberScreenFrom='';
+        try{
+        comingFrom= sessionStorage.getItem("users_authors_screen") ;      
+        }catch(error){
+            console.log(error);
+        }
+        if(comingFrom=="show_users_button"){
+            goingToSinlgeMemberScreenFrom="users_table";
+        }
+        else if(comingFrom=="show_authors_button"){
+            goingToSinlgeMemberScreenFrom="authors_table";
+        }
+        else{
+            goingToSinlgeMemberScreenFrom="[some error occur]";
+        }
+        sessionStorage.setItem("single_user_author",goingToSinlgeMemberScreenFrom);
+        window.location.href="/admin/single_user_author/single_user_author.html"
     }
    
 

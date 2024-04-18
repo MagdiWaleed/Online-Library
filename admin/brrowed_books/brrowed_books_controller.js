@@ -15,14 +15,14 @@ class SingleBrrowedBookModel{
   }
   
   
-  var rowDetails="<tr class='odd'>  <td><div onclick=\"navigateToPage('/admin/single_book/single_book.html')\">how to win friends</div></td><td><div>self-develop</div></td><td><div onclick=\"navigateToPage('/admin/single_user_author/single_user_author.html')\">Dial C</div></td><td><div onclick=\"navigateToPage('/admin/single_user_author/single_user_author.html')\">Magdi </div></td><td><div>10/2/2022</div></td></tr>";
+  var rowDetails="<tr class='odd'>  <td><div onclick=\"goingToSingleBook()\">how to win friends</div></td><td><div>self-develop</div></td><td><div onclick=\"goingToSingleAuthor()\">Dial C</div></td><td><div onclick=\"goingToSingleUser()\">Magdi </div></td><td><div>10/2/2022</div></td></tr>";
 
   function buildSingleRow(isEven,singleBrrowedBookData){
     backgroundStyle="odd";
     if(isEven){
         backgroundStyle="even";
     }
-    singleRow="<tr class="+backgroundStyle+">"+"<td><div onclick=\"navigateToPage('/admin/single_book/single_book.html')\">"+singleBrrowedBookData.book_name+"</div></td>"+" <td> <div>"+singleBrrowedBookData.category+"</div></td><td><div onclick=\"navigateToPage('/admin/single_user_author/single_user_author.html')\">"+singleBrrowedBookData.author_name+" </div></td>"+"<td><div onclick=\"navigateToPage('/admin/single_user_author/single_user_author.html')\">"+singleBrrowedBookData.user_name+"</div></td>"+"<td><div>"+singleBrrowedBookData.brrowedDate+"</div></td></tr>";
+    singleRow="<tr class="+backgroundStyle+">"+"<td><div onclick=\"goingToSingleBook()\">"+singleBrrowedBookData.book_name+"</div></td>"+" <td> <div>"+singleBrrowedBookData.category+"</div></td><td><div onclick=\"goingToSingleAuthor()\">"+singleBrrowedBookData.author_name+" </div></td>"+"<td><div onclick=\"goingToSingleUser()\">"+singleBrrowedBookData.user_name+"</div></td>"+"<td><div>"+singleBrrowedBookData.brrowedDate+"</div></td></tr>";
     return singleRow;    
 }
 
@@ -49,6 +49,16 @@ class SingleBrrowedBookModel{
         delete s; 
     }
    
-
+function goingToSingleBook(){
+    window.location.href='/admin/single_book/single_book.html';
+}
+function goingToSingleUser(){
+    sessionStorage.setItem("single_user_author","users_table");  //user_table this is the value we are storing it into single_user_author storage to retrive it latly
+    window.location.href="/admin/single_user_author/single_user_author.html";
+}
+function goingToSingleAuthor(){
+    sessionStorage.setItem("single_user_author","authors_table");  //user_table this is the value we are storing it into single_user_author storage to retrive it latly
+    window.location.href="/admin/single_user_author/single_user_author.html";
+}
 
   
