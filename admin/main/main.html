@@ -18,7 +18,11 @@
   <link rel="stylesheet" href="/style/navigation.css">
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
+  <link rel="stylesheet" href="/style/books.css">
+  <link rel="stylesheet" href="/style/search_card.css">
+  <link rel="stylesheet" href="main_style.css">
   <script src="/script/navigation.js"></script>
+  <script src="main_controller.js" ></script>
   </head>
   <body>
     <header>
@@ -38,9 +42,8 @@
               <pre>B R R O W E D 
 B O O K S</pre>
             </button>
-            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
-            <pre>  A D D  N E W  
-B O O K</pre> 
+            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
+            S T A T I S T I C S
              </button>
             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
           </div>  
@@ -48,20 +51,42 @@ B O O K</pre>
     </header>
       <main>
         <div style="height: 50px;"></div>
-        <form action="/admin/searching/searchingScreen.html">
-          <input type="text" placeholder="Book name">
-        <button class="normal_button" style="width: 100px;">Search</button> 
-        </form>
-        <ul>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 1</a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html ">book 2 <span style="color: gray; display: inline-blockS;">(Borrowed)</span></a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 3</a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 4</a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 5 <span style="color: gray; display: inline-blockS;">(Borrowed)</span></a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 6</a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 7 <span style="color: gray; display: inline-blockS;">(Borrowed)</span></a> </li>
-         <li> <a href="/admin/singleBook/singleBookScreen.html">book 8</a> </li>
-      </ul>
+        <div id="search_card">
+          <input type="text" id="search" name="search" placeholder="Search books, genres, artists...">
+          <div style="height: 10px;"></div>
+
+          <button class="normal_button" onclick="navigateToPage('/admin/searching/searching.html')" >search</button>
+        </div>
+        <div style="height: 20px;"></div>
+        <div>
+          <div class="row"><h1 style="height: 40px;">Latest Books</h1> 
+            <button class="normal_button edit_button" onclick="navigateToPage('/admin/books_screen/books_screen.html')">Edit Latest</button></div>
+        </div>
+  
+        
+        <div class="bookshelves">   
+    
+          <script>
+            /////////////////////////////////////////////
+                    getLatestBooksList(10);
+            /////////////////////////////////////////////
+                     </script>     
+        </div>
+  <hr style="margin: 50px 0;"/>
+      <div>
+          <div class="row"><h1 style="height: 40px;">Trending Books</h1> 
+            <button class="normal_button edit_button" onclick="navigateToPage('/admin/books_screen/books_screen.html')">Edit Trending</button></div>
+        </div>
+  
+        <div class="bookshelves">   
+         <script>
+          /////////////////////////////////////////////////
+                  getTrendingBooksList(10);
+          /////////////////////////////////////////////\
+          
+         </script>
+     </div>  
+     <div style="height: 20px;"> </div>
       </main>
 <footer class="borders">
   <div class="faq">

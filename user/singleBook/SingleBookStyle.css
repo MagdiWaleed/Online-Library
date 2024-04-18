@@ -3,19 +3,30 @@
     background-color:#D3C3A9; 
     border-radius: 10px; 
     padding: 20px; 
+    border: 1px black solid;
+    box-shadow: 0px 3px 5px rgba(0, 0,0,0.5);
 
 
 }
+.discription_p{
+    text-align: center;
+}
+
 .book_img {
     width: 800px;
-    height: 300px;
-    padding: 20px;
+    height: 500px;
+    padding: 8px;
     border-radius: 2px;
     margin-right: 40px;
     border: #151514 solid;
 }
 .rating {
     font-size: 24px;
+    background-color:#AE9B7E;
+    padding: 5px 15px ;
+    padding-bottom: 7px;
+    border: 1px #9e8a6d solid;
+    border-radius: 12px;
   }
   
 .star {
@@ -23,14 +34,11 @@
   }
 
 .author_details {
-
+    box-shadow: 0 3px 5px rgba(0, 0,0,0.5);
     display: flex;
     background-color: #D3C3A9; 
     border-radius: 10px; 
     padding: 20px; 
-    width: 840px;
-    height: 150px;
-    margin: 10px;
     border: 1px #151514 solid;
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borrowed Books - Rome Library</title>
+    <title>[User Authors] - Rome Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -18,12 +18,10 @@
   <link rel="stylesheet" href="/style/table.css">
   <link rel="stylesheet" href="/style/search_card.css">
   <script src="/script/navigation.js"></script>
-  <script src="brrowed_books_controller.js"></script>
   </head>
   <body>
     <header>
       <div id="backGround_image" >
-        <!-- <img src="/references/images/Logo.png" alt=""> -->
           <div id="backGround" class="borders">
             <img id="project_logo" src="/references/images/Logo.png" alt="" onclick="navigateToPage('/admin/about/about.html')">
             <h1>
@@ -34,86 +32,66 @@
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
             <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
-            <button style="border-radius: 0 0 0 0;" id="selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
+            <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
               <pre>B R R O W E D 
 B O O K S</pre>
             </button>
-            <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
-              S T A T I S T I C S
-                  </button>
+            <button style="border-radius: 0 0 0 0;"  id="selected_page_button" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
+          S T A T I S T I C S
+             </button>
              <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
             </div>  
       </div>
     </header>
 <main>
   <div style="height: 25px;"></div>
-    <h1>Borrowed Books</h1>
+    <h1>Users/Authors Books</h1>
     <div style="height: 20px;"></div>
-    <form action="/admin/searching/searching.html">
+
       <div id="search_card">
         <input type="text" id="search" name="search" placeholder="Search books, genres, artists...">
         <div style="height: 10px;"></div>
-        <button class="normal_button" onclick="navigateToPage('/admin/searching/searching.html')">search</button>
+        <button class="normal_button">search</button>
       </div>
-    </form>
+    
     <div style="height: 20px;"></div>
     <div id="table_background">
     <table id="table_body" >
         <tr>
-            <th><div>Book name</div></th>
-            <th><div>Category</div></th>
-            <th><div>Book author</div></th>
-            <th><div>Borrowed by</div></th>
-            <th><div>Borrowed date</div></th>
+            <th><div>User name</div></th>
+            <th><div>#books</div></th>
         </tr>
-        <tr class="odd">
-          <td><div onclick="navigateToPage('/admin/single_book/single_book.html')">how to win friends</div></td>
-          <td><div>self-develop</div></td>
-          <td><div onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">Dial C</div></td>
-          <td><div onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">Magdi </div></td>
-          <td><div>10/2/2022</div></td>
+        <tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+            <td><div>Magdi waleed mohamed khalaf allah</div></td>
+            <td><div>50</div></td>
       </tr>
-      <tr class="even">
-        <td><div>how to win friends</div></td>
-        <td><div>self-develop</div></td>
-        <td><div>Dial C</div></td>
-        <td><div>Magdi </div></td>
-        <td><div>10/2/2022</div></td>
-    </tr>
-    <tr class="odd">
-      <td><div >how to win friends</div></td>
-      <td><div>self-develop</div></td>
-      <td><div>Dial C</div></td>
-      <td><div>Magdi </div></td>
-      <td><div>10/2/2022</div></td>
+      <tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+        <td><div>Magdi waleed mohamed khalaf allah</div></td>
+        <td><div>50</div></td>
+    </tr> <tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+        <td><div>Magdi waleed mohamed khalaf allah</div></td>
+        <td><div>50</div></td>
   </tr>
-  <tr class="even">
-    <td><div>how to win friends</div></td>
-    <td><div>self-develop</div></td>
-    <td><div>Dial C</div></td>
-    <td><div>Magdi </div></td>
-    <td><div>10/2/2022</div></td>
+  <tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+    <td><div>Magdi waleed mohamed khalaf allah</div></td>
+    <td><div>50</div></td>
 </tr>
-<tr class="odd">
-  <td><div>how to win friends</div></td>
-  <td><div>self-develop</div></td>
-  <td><div>Dial C</div></td>
-  <td><div>Magdi </div></td>
-  <td><div>10/2/2022</div></td>
+<tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+    <td><div>Magdi waleed mohamed khalaf allah</div></td>
+    <td><div>50</div></td>
 </tr>
-<tr class="even">
-  <td><div>how to win friends</div></td>
-  <td><div>self-develop</div></td>
-  <td><div>Dial C</div></td>
-  <td><div>Magdi </div></td>
-  <td><div>10/2/2022</div></td>
+<tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+<td><div>Magdi waleed mohamed khalaf allah</div></td>
+<td><div>50</div></td>
 </tr>
-<tr class="odd">
-<td><div>how to win friends</div></td>
-<td><div>self-develop</div></td>
-<td><div>Dial C</div></td>
-<td><div>Magdi </div></td>
-<td><div>10/2/2022</div></td>
+
+<tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+    <td><div>Magdi waleed mohamed khalaf allah</div></td>
+    <td><div>50</div></td>
+</tr>
+<tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
+<td><div>Magdi waleed mohamed khalaf allah</div></td>
+<td><div>50</div></td>
 </tr>
 
     </table>

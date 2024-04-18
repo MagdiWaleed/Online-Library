@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(Book Name) - Rome Library</title>
-    <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
-   
+    <title>Add New Book - Rome Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
     <link rel="icon" type="image/png" href="/references/images/favicon2.png" href>
   <link rel="stylesheet" href="/style/dimension.css">
   <link rel="stylesheet" href="/style/footer.css">
@@ -13,6 +15,8 @@
   <link rel="stylesheet" href="/style/navigation.css">
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
+  <link rel="stylesheet" href="/style/books.css">
+  <link rel="stylesheet" href="/style/single_book_card.css">
   <script src="/script/navigation.js"></script>
   </head>
   <body>
@@ -28,43 +32,93 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button id="selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
+            <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
               <pre>B R R O W E D 
 B O O K S</pre>
             </button>
-            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
-            <pre>  A D D  N E W  
-B O O K</pre> 
-             </button>
-            <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
-          </div>  
+            <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
+              S T A T I S T I C S
+                  </button>
+             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
+            </div>  
       </div>
     </header>
-<main>
-<h2>(Book Name)</h2>
-<p>By: Author Name</p>
-<img src="/references/images/default-book-cover.jpg" alt="">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus vitae quis asperiores molestiae porro ducimus dolore repudiandae excepturi, cupiditate assumenda at culpa exercitationem repellendus possimus aperiam laboriosam! Illum, voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quisquam animi sit odit a ab blanditiis quasi natus porro quos impedit, veniam at soluta dolores omnis quas maxime minima laborum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora laudantium, sint ducimus laboriosam sapiente dolorum, cumque, excepturi voluptate dolores blanditiis quod laborum officiis dolorem magni necessitatibus consequatur perferendis accusamus et? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur deleniti quasi sapiente, ullam qui nisi ad omnis aperiam vel incidunt magnam culpa error aspernatur iusto facilis! Animi placeat doloribus commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ea molestias sed, voluptates porro repudiandae autem delectus voluptate excepturi neque soluta. Odit adipisci fugiat totam obcaecati voluptates repellendus dolore numquam.
-</p>
-<h3>Borrowed By: (User name)</h3>
-<a href="editSingleBook/editSingleBookScreen.html"><button>Edit this book</button></a>
+          <main>
+            
+            <h2 style="margin-top: 40px;">The Village </h2>
+            <div style="height: 5px;"></div>
+            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal; font-size: 14px;"> Magdi waleed mohamed</span></h3>
+        
+        <div style="height: 10px;"></div>
+        <div class="book_dis">
+        <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
+          <div style="margin-top: 30px;">
+            <h2 >Discription:</h2>
+            <div style="height: 20px;" ></div>
+            <p class="description_p" id="description">
+              Title: Shadows of the Moonlight: The Village of the Wolfers
 
-</main>
-<footer>
-    <div class="faq">
-        <h4>FAQ</h4>
-       </div>
-       <h5>What is Rome library?</h5>
-       <p> it's a library that has a wide variety of books</p>
-    <div class="contact-links">
-      <a href="#">Contact Us</a>
-      <a href="#">Support</a>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2024 Rome Library</p>
-    </div>
-  </footer>
-      
- </body>
-</html>
+              In the heart of a secluded valley lies the quaint village of Eclipsia, shrouded in a perpetual haze beneath the moonlit sky. Here, amidst the whispers of ancient forests and the eerie howls of unseen creatures, a chilling secret lurks beneath the surface.
+              
+              In "Shadows of the Moonlight: The Village of the Wolfers," the tale unfolds within the confines of this enigmatic hamlet, where a centuries-old curse binds its inhabitants to a life fraught with fear and danger. Once every full moon, the village is besieged by the dreaded Wolfers, savage beasts rumored to be part-human, part-wolf, with a voracious appetite for flesh.
+              
+              As the villagers struggle to survive in the face of this relentless menace, a young, determined outsider arrives in Eclipsia. Drawn by curiosity and a desire for adventure, they soon find themselves embroiled in the sinister mysteries that shroud the village.
+              
+              Amidst ancient rituals and whispered legends, our protagonist delves deeper into the dark history of Eclipsia, uncovering long-buried truths that threaten to unravel the fabric of reality itself. With each revelation, they come closer to unraveling the secrets of the Wolfers and the curse that binds them to the village.
+              
+              But as tensions rise and alliances shift, the line between friend and foe blurs, and the true nature of the Wolfers is revealed to be more complex and tragic than anyone could have imagined. In a desperate bid for survival, our protagonist must confront not only the beasts that haunt the shadows but also the darkest aspects of human nature itself.
+              
+              "Shadows of the Moonlight: The Village of the Wolfers" is a gripping tale of mystery, horror, and redemption, exploring themes of sacrifice, identity, and the enduring power of hope in the face of darkness. With its richly imagined world and spine-tingling suspense, this is a book that will keep readers on the edge of their seats until the very last page.            
+            </p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+
+        <div class="author_details">
+            <div>
+              <h2>About author:</h2>
+              <div style="height: 20px;"></div>
+              <p id="about_author">
+                Magdi Waleed is a master storyteller renowned for her captivating narratives that blend elements of mystery, fantasy, and horror. With a keen eye for detail and a talent for crafting intricate, atmospheric worlds, Nightshade has garnered a devoted following of readers who eagerly anticipate each new installment of her work.
+
+Drawing inspiration from a lifelong fascination with folklore, mythology, and the supernatural, Nightshade weaves tales that transport readers to realms where the boundaries between reality and myth blur. Her vivid prose and skillful characterizations breathe life into the inhabitants of her worlds, from the courageous protagonists who dare to confront the unknown to the sinister forces that lurk in the shadows.
+
+"Shadows of the Moonlight: The Village of the Wolfers" is the latest addition to Nightshade's impressive body of work, showcasing her ability to create immersive, spine-tingling tales that linger in the imagination long after the final page is turned. With its richly imagined setting, compelling characters, and pulse-pounding suspense, this collaboration between Elara Nightshade promises to be an unforgettable literary journey into the heart of darkness.
+
+
+
+
+
+
+
+              </p>
+            </div>
+            
+        </div>
+      <div style="display: flex; justify-content: right; ">
+        <button class="normal_button edit_button" style="width: 200px; margin-top: 20px;" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">Edit This Book</button>
+      </div>
+
+      <div style="height: 20px;"></div>
+    
+          <script src="/admin/add_new_book/add_new_book_script.js"></script>
+      </main>
+      <footer class="borders">
+        <div class="faq">
+            <h4>FAQ</h4>
+           </div>
+           <h5>What is Rome library?</h5>
+           <p> it's a library that has a wide variety of books</p>
+        <div class="contact-links">
+          <a href="#">Contact Us</a>
+          <a href="#">Support</a>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2024 Rome Library</p>
+        </div>
+      </footer>
+          
+      </body>
+      </html>
