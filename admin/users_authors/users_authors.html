@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/style/table.css">
   <link rel="stylesheet" href="/style/search_card.css">
   <script src="/script/navigation.js"></script>
+  <script src="users_authors_controller.js"></script>
   </head>
   <body>
     <header>
@@ -61,39 +62,9 @@ B O O K S</pre>
             <th><div>User name</div></th>
             <th><div>#books</div></th>
         </tr>
-        <tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-            <td><div>Magdi waleed mohamed khalaf allah</div></td>
-            <td><div>50</div></td>
-      </tr>
-      <tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-        <td><div>Magdi waleed mohamed khalaf allah</div></td>
-        <td><div>50</div></td>
-    </tr> <tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-        <td><div>Magdi waleed mohamed khalaf allah</div></td>
-        <td><div>50</div></td>
-  </tr>
-  <tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-    <td><div>Magdi waleed mohamed khalaf allah</div></td>
-    <td><div>50</div></td>
-</tr>
-<tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-    <td><div>Magdi waleed mohamed khalaf allah</div></td>
-    <td><div>50</div></td>
-</tr>
-<tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-<td><div>Magdi waleed mohamed khalaf allah</div></td>
-<td><div>50</div></td>
-</tr>
-
-<tr class="odd" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-    <td><div>Magdi waleed mohamed khalaf allah</div></td>
-    <td><div>50</div></td>
-</tr>
-<tr class="even" onclick="navigateToPage('/admin/single_user_author/single_user_author.html')">
-<td><div>Magdi waleed mohamed khalaf allah</div></td>
-<td><div>50</div></td>
-</tr>
-
+        <script>
+          getTableRows(3);
+        </script>
     </table>
   </div>
   <div style="height: 20px;"></div>

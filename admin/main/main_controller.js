@@ -23,7 +23,7 @@ class SingleBookModel{
 // var bookCard="  <div class='book_details' onclick=''><img src='/references/images/book.jpg' alt='IMAGE-NOT-FOUND' class='book_image' ><h4>The Art Of</h4><p>By: Author Name</p></div>";
 
 function buildBookCard(singleBookData){
-  image_layer="<div class='book_details' onclick=\"navigateToPage('/admin/single_book/single_book.html')\"><img src='"+singleBookData.image+"' alt='IMAGE-NOT-FOUND' class='book_image' >";
+  image_layer="<div class='book_details ' onclick=\"navigateToPage('/admin/single_book/single_book.html')\"><img src='"+singleBookData.image+"' alt='IMAGE-NOT-FOUND' class='book_image' >";
   book_details_layer="<h4>"+singleBookData.book_name+"</h4><p>By: "+singleBookData.author_name+"</p></div>"
   return image_layer+book_details_layer;
 }
@@ -50,7 +50,6 @@ return first_layer+image_layer+book_details_layer;
 
 function getTrendingBooksList  (numberOfElements){
          bookCardsList="";
-         console.log(buildBookCard(new SingleBookModel()));
         for(i=0;i<numberOfElements;i++){
           s =new SingleBookModel();
           s.id=0;
