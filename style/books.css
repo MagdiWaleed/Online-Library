@@ -23,6 +23,11 @@
   font-size: 20px;
   font-weight: bold;
   transition: all 1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  width: 200px;
+  text-align: center;;
 }
 
 .overflow {
@@ -52,6 +57,10 @@
 .book_details p , .borrowed_books p{
   text-align: center;
   font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  width: 200px;
 
 }
 
