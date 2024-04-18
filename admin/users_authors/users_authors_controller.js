@@ -33,6 +33,25 @@ class SingleUserAuthorModel{
         document.write(tableRows);
         delete s; 
     }
+    function HOW_IAM_HERE(){
+        try{
+            comingFrom=sessionStorage.getItem("users_authors_screen");
+        }catch(error){
+            console.log(error);
+            comingFrom="";
+        }
+        
+        if(comingFrom=="show_users_button"){
+            document.getElementById("owner_text").value="Users Brrowed books";
+        }
+        else if(comingFrom=="show_authors_button"){
+            document.getElementById("owner_text").value="Authors books";
+        }
+        else{
+            document.getElementById("owner_text").value='[some error occur]';   
+        }
+
+    }
    
 
 

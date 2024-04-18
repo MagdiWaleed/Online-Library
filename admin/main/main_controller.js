@@ -95,3 +95,14 @@ function getLatestBooksList  (numberOfElements){
   }
   document.write(bookCardsList);
 }
+
+
+
+
+
+
+function search(){
+  let textfieldText=document.getElementById("search").value;
+  sessionStorage.setItem("search",textfieldText);
+  window.location.href="/admin/searching/searching.html";
+}

@@ -72,3 +72,12 @@ class SingleBookModel{
           document.write(bookCardsList);
   }
   
+  function getTheTextForSearching(){
+    try{
+       storedDataString =sessionStorage.getItem("search");
+    }catch(error){
+        console.log(error);
+    }
+    document.getElementById("search").value=storedDataString;
+    
+  }
