@@ -22,6 +22,7 @@ function functionDisplayData(){
     document.getElementById("book_name").innerHTML=singleBookData.book_name;
     document.getElementById("author_name").innerHTML=singleBookData.author_name;
     document.getElementById("about_author").innerHTML=singleBookData.about_author;
+    document.getElementById("description").innerHTML=singleBookData.book_description;
     if(singleBookData.image=="#"){
         
     document.getElementById("book_image").src='/references/images/default-book-cover.jpg';

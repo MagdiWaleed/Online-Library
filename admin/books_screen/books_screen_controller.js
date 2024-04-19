@@ -63,6 +63,9 @@ class SingleBookModel{
    book15= new SingleBookModel("#15", "The Catch-22", " A satirical war novel highlighting the absurdity of bureaucracy and military rules.",
               "#115", ":Joseph Heller", "  American author and playwright.",
               "   Satire", "null", "null", "1015");
+   book16= new SingleBookModel("#16", "Mein Kampf", "Mein Kamph is the autobiography of Adolf Hitler, this autobiography gives detailed insight into the mission and vision of Hitler that shocked the world. You will never be satisfied until go through the whole book. This book is one of the most widely read book worldwide.",
+              "#116", "Adolf Hitler", "Adolf Hitler was an Austrian-born German politician who was the dictator of Nazi Germany from 1933 until his suicide in 1945. He rose to power as the leader of the Nazi Party, becoming the chancellor in 1933 and then taking the title of Führer und Reichskanzler in 1934",
+              "Autobiography", "null", "null", "1016" , "/references/images/books/mein.jpg");
   
     bookList=[
       book1
@@ -73,7 +76,7 @@ class SingleBookModel{
       ,
       book4
       ,
-      book5,book6,book7,book8,book9,book10,book11,book12,book13,book14,book15
+      book5,book6,book7,book8,book9,book10,book11,book12,book13,book14,book15, book16
     ]
   
   
