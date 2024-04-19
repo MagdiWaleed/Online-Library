@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/style/search_card.css">
     <link rel="stylesheet" href="/style/books.css">
     <script src="/script/navigation.js"></script>
+    <script src="my_books_controller.js"></script>
 
 </head>
 <body>
@@ -49,72 +50,25 @@
       </div>
       
       <div class="NumOfBorrowed">
-        <p># Of Borrowed Books :</p>
-        <p>50</p>
+        <p># Of Borrowed Books : </p>
+        <p id="number_of_books"> 50</p>
       </div>
     <div class="user-books">
       <div style="height: 30px;"></div>
         <h2 style="height: 40px;">Your Borrowed Books:</h2>
 
         <div class="bookshelves">   
-          <div class="image_back_ground">
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/singleBook/SingleBook.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>
-          </div>
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>  
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>  
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>  
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div>
-          <div class="book_details">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-           <h4>Book Title</h4>
-           <p>By: Author Name</p>
-          </div> 
-          <div class="book_details">
-            <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-            <h4>Book Title</h4>
-            <p>By: Author Name</p>
-           </div>  
-           <div class="book_details">
-            <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-            <h4>Book Title</h4>
-            <p>By: Author Name</p>
-           </div>
-          
+         <script>
+          ///////////////////
+          getMyBooksList();
+          getNumberOfBooks()
+          ///////////////////
+         </script>
       </div>
     </main>
+    
     <div style="height: 30px;"></div>
-    <footer>
+    <footer class="borders">
         <div class="faq">
             <h4>FAQ</h4>
            </div>
