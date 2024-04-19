@@ -87,7 +87,11 @@ class SingleBookModel{
 
         book18= new SingleBookModel("#18", "Can't Hurt Me", " For David Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. ",
                  "#118", "David Goggins", "David Goggins is a Retired Navy SEAL and the only member of the U.S. Armed Forces to complete SEAL training, Army Ranger School, and Air Force Tactical Air Controller training. Goggins has completed more than seventy ultra-distance races, often placing in the top five, he is often know as 'toughest man alive'.",
-                 "Autobiography", "null", "null", "1018", "/references/images/books/81gTRv2HXrL._AC_UF1000,1000_QL80_.jpg");        
+                 "Autobiography", "null", "null", "1018", "/references/images/books/81gTRv2HXrL._AC_UF1000,1000_QL80_.jpg");     
+                 
+      book19= new SingleBookModel("#19", "The Communist Manifesto", "The complete The Communist Manifesto by Karl Marx and Friedrich Engels, in the 1888 English version edited by Engels himself. One of the most influential political treatises of all time, The Communist Manifesto is essential reading for every student of politics and history.",
+                 "#119", "Karl Marx & Friedrich Engels", "Karl Marx was born in Trier, Germany and studied law at Bonn and Berlin. In 1848, with Freidrich Engels, he finalized The Communist Manifesto. He settled in London, where he studied economics and wrote the first volume of his major work, & Friedrich Engels was born in Westphalia in 1820, the son of a textile manufacturer. After military training in Berlin, Engels already a convert to communism,  went to Manchester in 1842 to represent the family firm.",
+                 "philosophy", "null", "null", "1019", "/references/images/books/the-communist-manifesto-104.jpg");    
      
        bookList=[
          book1
@@ -98,7 +102,7 @@ class SingleBookModel{
          ,
          book4
          ,
-         book5,book6,book7,book8,book9,book10,book11,book12,book13,book14,book15,book16,book17,book18
+         book5,book6,book7,book8,book9,book10,book11,book12,book13,book14,book15,book16,book17,book18,book19
        ]
      
      

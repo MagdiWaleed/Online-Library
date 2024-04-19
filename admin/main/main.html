@@ -25,9 +25,8 @@
   <body>
     <header>
       <div id="backGround_image" >
-        <!-- <img src="/references/images/Logo.png" alt=""> -->
           <div id="backGround" class="borders">
-            <img id="project_logo" src="/references/images/Logo.png" alt="" onclick="navigateToPage('/admin/about/about.html')">
+            <img id="project_logo"  src="/references/images/Logo.png" alt="" onclick="navigateToPage('/admin/about/about.html')">
             <h1>
               R O M E
             </h1>
@@ -35,15 +34,16 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button id="selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
+            <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
-              <pre>B O R R O W E D B O O K S</pre>
+              <pre>B O R R O W E D  
+B O O K S</pre>
             </button>
-            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
-            S T A T I S T I C S
+            <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
+         S T A T I S T I C S
              </button>
-            <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
-          </div>  
+             <button style="border-radius: 0 0 50px 0;" id="selected_page_button"  onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
+            </div>  
       </div>
     </header>
       <main>
