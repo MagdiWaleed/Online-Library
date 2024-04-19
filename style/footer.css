@@ -7,3 +7,11 @@ footer *{
     height: 30px;
     font-weight: 600;  
 }
+
+.foottext {
+    text-align: center;
+}
+
+.contact-links {
+    text-align: center;
+}
