@@ -40,15 +40,15 @@ B O O K S</pre>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
          S T A T I S T I C S
              </button>
-             <button style="border-radius: 0 0 50px 0;" id="selected_page_button"  onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
+             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button"  onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
             </div>  
       </div>
     </header>
           <main>
             
-            <h2 id="book_name" style="margin-top: 40px;">The Village </h2>
+            <h2 id="book_name" style="margin-top: 40px;"> </h2>
             <div style="height: 5px;"></div>
-            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal; font-size: 14px;" id="author_name"> Magdi waleed mohamed</span></h3>
+            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal; font-size: 14px;" id="author_name"> </span></h3>
         
         <div style="height: 10px;"></div>
         <div class="book_dis">
@@ -57,20 +57,9 @@ B O O K S</pre>
             <h2 >Discription:</h2>
             <div style="height: 20px;" ></div>
             <p class="description_p" id="description">
-              Title: Shadows of the Moonlight: The Village of the Wolfers
-
-              In the heart of a secluded valley lies the quaint village of Eclipsia, shrouded in a perpetual haze beneath the moonlit sky. Here, amidst the whispers of ancient forests and the eerie howls of unseen creatures, a chilling secret lurks beneath the surface.
-              
-              In "Shadows of the Moonlight: The Village of the Wolfers," the tale unfolds within the confines of this enigmatic hamlet, where a centuries-old curse binds its inhabitants to a life fraught with fear and danger. Once every full moon, the village is besieged by the dreaded Wolfers, savage beasts rumored to be part-human, part-wolf, with a voracious appetite for flesh.
-              
-              As the villagers struggle to survive in the face of this relentless menace, a young, determined outsider arrives in Eclipsia. Drawn by curiosity and a desire for adventure, they soon find themselves embroiled in the sinister mysteries that shroud the village.
-              
-              Amidst ancient rituals and whispered legends, our protagonist delves deeper into the dark history of Eclipsia, uncovering long-buried truths that threaten to unravel the fabric of reality itself. With each revelation, they come closer to unraveling the secrets of the Wolfers and the curse that binds them to the village.
-              
-              But as tensions rise and alliances shift, the line between friend and foe blurs, and the true nature of the Wolfers is revealed to be more complex and tragic than anyone could have imagined. In a desperate bid for survival, our protagonist must confront not only the beasts that haunt the shadows but also the darkest aspects of human nature itself.
-              
-              "Shadows of the Moonlight: The Village of the Wolfers" is a gripping tale of mystery, horror, and redemption, exploring themes of sacrifice, identity, and the enduring power of hope in the face of darkness. With its richly imagined world and spine-tingling suspense, this is a book that will keep readers on the edge of their seats until the very last page.            
             </p>
+            <h3 style="margin-top: 10px;">Category:</h3>
+            <p id="book_category"></p>
             </div>
           </div>
         </div>
@@ -81,12 +70,7 @@ B O O K S</pre>
               <h2>About author:</h2>
               <div style="height: 20px;"></div>
               <p id="about_author">
-                Magdi Waleed is a master storyteller renowned for her captivating narratives that blend elements of mystery, fantasy, and horror. With a keen eye for detail and a talent for crafting intricate, atmospheric worlds, Nightshade has garnered a devoted following of readers who eagerly anticipate each new installment of her work.
-
-Drawing inspiration from a lifelong fascination with folklore, mythology, and the supernatural, Nightshade weaves tales that transport readers to realms where the boundaries between reality and myth blur. Her vivid prose and skillful characterizations breathe life into the inhabitants of her worlds, from the courageous protagonists who dare to confront the unknown to the sinister forces that lurk in the shadows.
-
-"Shadows of the Moonlight: The Village of the Wolfers" is the latest addition to Nightshade's impressive body of work, showcasing her ability to create immersive, spine-tingling tales that linger in the imagination long after the final page is turned. With its richly imagined setting, compelling characters, and pulse-pounding suspense, this collaboration between Elara Nightshade promises to be an unforgettable literary journey into the heart of darkness.
-
+             
 
 
 
@@ -98,7 +82,7 @@ Drawing inspiration from a lifelong fascination with folklore, mythology, and th
             
         </div>
       <div style="display: flex; justify-content: right; ">
-        <button class="normal_button edit_button" style="width: 200px; margin-top: 20px;" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">Edit This Book</button>
+        <button class="normal_button edit_button" style="width: 200px; margin-top: 20px;" onclick="editThisBook()">Edit This Book</button>
       </div>
 
       <div style="height: 20px;"></div>

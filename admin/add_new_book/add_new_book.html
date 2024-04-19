@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/style/books.css">
   <link rel="stylesheet" href="/style/single_book_card.css">
   <script src="/script/navigation.js"></script>
+  <script src="add_new_book_script.js"></script>
   </head>
   <body>
     <header>
@@ -35,7 +36,7 @@
           <div id="navigation_bar" class="borders">
             <button class="not_selected_page_button" style="border-radius: 0 0 0 50px;" onclick="navigateToPage('/admin/main/main.html')" >H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/brrowed_books/brrowed_books.html')">
-              <pre>B R R O W E D 
+              <pre>B O R R O W E D 
 B O O K S</pre>
             </button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
@@ -54,6 +55,8 @@ B O O K S</pre>
             <div class="text_textfield" >  <label for="" > Book name:</label>  <input type="text" id="input_book_name" placeholder="name"><br></div>
           <div style="height: 5px;"></div>
           <div class="text_textfield">  <label for="" >Book author:</label> <input type="text" id="input_author_name" placeholder="author"><br></div>
+          <div style="height: 5px;"></div>
+          <div class="text_textfield">  <label for="" >book catergory:</label> <input type="text" id="input_book_category" placeholder="Category"><br></div>
           <div style="height: 5px;"></div>
           <div class="text_textfield">   <label for="" style="margin-bottom:auto;" >Description:</label><textarea name="Description" id="input_description" cols="30" rows="10" ></textarea><br></div>
           <div style="height: 10px;"></div> 
@@ -79,7 +82,7 @@ B O O K S</pre>
         </div>
         <div style="height: 10px;"></div>
         <div class="book_dis">
-        <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
+        <img src="/references/images/default-book-cover.jpg" alt="" id="book_image" class="book_img">
           <div style="margin-top: 30px;">
             <h2 >Discription:</h2>
             <div style="height: 20px;"></div>
@@ -100,6 +103,9 @@ B O O K S</pre>
                               
             
             </p>
+            
+            <h3 style="margin-top: 10px;">Category:</h3>
+            <p id="book_category"></p>
             </div>
           </div>
         </div>
@@ -117,8 +123,13 @@ B O O K S</pre>
         </div>
         
       <div style="height: 20px;"></div>
-    
-          <script src="/admin/add_new_book/add_new_book_script.js"></script>
+          <script src="liseners.js"></script>
+          <script>
+            
+            /////////////////
+            fetchData();
+            ///////////
+          </script>
       </main>
       <footer class="borders">
         <h4 class="foottext">R O M E</h4>

@@ -16,13 +16,22 @@ class SingleBookModel{
     }
   }
 
+var singleBookData = new SingleBookModel();
+function editThisBook(){
+    sessionStorage.setItem("single_book",JSON.stringify(singleBookData));
+    window.location.href="/admin/add_new_book/add_new_book.html?query=singleBook";
+}
+
 function functionDisplayData(){
     
     singleBookData= fetchBookData();
+
     document.getElementById("book_name").innerHTML=singleBookData.book_name;
     document.getElementById("author_name").innerHTML=singleBookData.author_name;
     document.getElementById("about_author").innerHTML=singleBookData.about_author;
     document.getElementById("description").innerHTML=singleBookData.book_description;
+    document.getElementById("book_category").innerHTML=singleBookData.category;
+    
     if(singleBookData.image=="#"){
         
     document.getElementById("book_image").src='/references/images/default-book-cover.jpg';
@@ -39,11 +48,12 @@ function fetchBookData(){
         data=JSON.parse(string_data);
     }catch(error){
         console.log(error);
+        data= new SingleBookModel();
     }
-    single_book_data= new SingleBookModel(id=data.id
-    ,book_name=data.book_name,book_description=data.book_description,author_id=data.author_id
-    ,author_name=data.author_name,about_author=data.about_author,category=data.category,
-    brrowed_date=data.brrowed_date,user_name=data.user_name,user_id=data.user_id,image=data.image)
+    // single_book_data= new SingleBookModel(id=data.id
+    // ,book_name=data.book_name,book_description=data.book_description,author_id=data.author_id
+    // ,author_name=data.author_name,about_author=data.about_author,category=data.category,
+    // brrowed_date=data.brrowed_date,user_name=data.user_name,user_id=data.user_id,image=data.image)
  
-    return single_book_data;
+    return data;
 }
