@@ -97,7 +97,6 @@ class SingleBookModel{
   
   
   
-  
      
   //     <div class="book_details" onclick="navigateToPage('/admin/single_book/single_book.html')">
   //     <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
