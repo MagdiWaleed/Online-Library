@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/style/books.css">
   <link rel="stylesheet" href="/style/single_book_card.css">
   <script src="/script/navigation.js"></script>
+  <script src="single_book_controller.js"></script>
   </head>
   <body>
     <header>
@@ -46,13 +47,13 @@ B O O K S</pre>
     </header>
           <main>
             
-            <h2 style="margin-top: 40px;">The Village </h2>
+            <h2 id="book_name" style="margin-top: 40px;">The Village </h2>
             <div style="height: 5px;"></div>
-            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal; font-size: 14px;"> Magdi waleed mohamed</span></h3>
+            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal; font-size: 14px;" id="author_name"> Magdi waleed mohamed</span></h3>
         
         <div style="height: 10px;"></div>
         <div class="book_dis">
-        <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
+        <img src="/references/images/default-book-cover.jpg" alt="" id="book_image" class="book_img">
           <div style="margin-top: 30px;">
             <h2 >Discription:</h2>
             <div style="height: 20px;" ></div>
@@ -104,7 +105,10 @@ Drawing inspiration from a lifelong fascination with folklore, mythology, and th
       <div style="height: 20px;"></div>
     
           <script src="/admin/add_new_book/add_new_book_script.js"></script>
-      </main>
+        <script>
+          functionDisplayData();
+        </script>
+        </main>
       <footer class="borders">
         <div class="faq">
             <h4>FAQ</h4>

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/style/books.css">
     <link rel="stylesheet" href="/style/single_book_card.css">
     <script src="/script/navigation.js"></script>
+    <script src="SingleBookContoller.js"></script>
   
   </head>
   <body>
@@ -46,13 +47,13 @@
   
       <main>
          
-            <h2>The SubTle Art of Not Giving A </h2>
+            <h2 id="book_name">The SubTle Art of Not Giving A </h2>
             <div style="height: 5px;"></div>
-            <h3 style="margin-left: 25px;">By: <span style="color: #7E7E7E; font-weight: normal;"> Author Name</span></h3>
+            <h3 style="margin-left: 25px;">By: <span id="author_name" style="color: #7E7E7E; font-weight: normal;"> Author Name</span></h3>
         
           <div style="height: 10px;"></div>
           <div class="book_dis">
-          <img src="/references/images/default-book-cover.jpg" alt="" class="book_img">
+          <img src="/references/images/default-book-cover.jpg" id="book_image" alt="" class="book_img">
             <div>
               <div style="display: flex; justify-content: right;">
               <div class="rating">
@@ -93,10 +94,10 @@
 
           <div class="author_details">
               <div>
-                <h2>Author Name:</h2>
+                <h2>Author Name: <span id="author_name"></span></h2>
                 <div style="height: 20px;">
                 </div>
-                <p>
+                <p id="about_author">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac augue nec tortor molestie tempus. Sed ultricies justo id nibh condimentum, sit amet rutrum lectus lobortis. Quisque nec odio vitae eros suscipit dapibus. Nulla facilisi. Aenean eget ipsum nec libero pharetra placerat. Duis in felis a est aliquam convallis.
                 </p>
               </div>
@@ -105,7 +106,7 @@
        <div style="height: 20px;"></div>
           <div>
             <div style=" display: flex; justify-content: right;">
-          <button class="normal_button" style="width: 400px;">Borrow/Remove</button>
+          <button class="normal_button" style="width: 400px;" id="my_brrowed_books">Borrow</button>
         </div>
         </div>
         <div style="height: 20px;"></div>
@@ -133,6 +134,11 @@
            <p>By: Author Name</p>
           </div>
           <div style="height: 30px;"></div>
+          <script>
+            /////////////////////
+            functionDisplayData()
+            ///////////////////////
+          </script>
       </main>
 
    

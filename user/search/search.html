@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/user/search/search_style.css">
     <link rel="stylesheet" href="/style/books.css">
     <script src="/script/navigation.js"></script>
+    <script src="search_contoroller.js"></script>
   
   </head>
   <body>
@@ -36,7 +37,7 @@
           </div>
           <div id="black_line"></div>
           <div id="navigation_bar" class="borders">
-            <button style="border-radius: 0 0 0 50px;"class="not_selected_page_button onclick="navigateToPage('/user/main/main.html')">H O M E</button>
+            <button style="border-radius: 0 0 0 50px;"class="not_selected_page_button" onclick="navigateToPage('/user/main/main.html')">H O M E</button>
             <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/user/my_books/my_books.html')">M Y  B O O K S</button>
             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/user/about/about.html')">A B O U T</button>  
           </div>  
@@ -45,73 +46,30 @@
   
     <main>
       <div style="height: 20px;"></div>
-    <form id="search_section">
-      <input type="text" placeholder="Search" style="width: 400px;">
-      <div style="width: 10px;"> </div>
-      <button class="normal_button" style="width: 150px;">Search</button>
+      <form id="search_section">
+        <input type="text" id="searchInput" placeholder="Search" style="width: 400px;">
+        <div style="width: 10px;"> </div>
+        <button class="normal_button" style="width: 150px;">Search</button>
+    </form>
     
-    </form> 
+    <script>
+        // Get the parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+        // Set the query value as the value of the search input
+        if (query) {
+            document.getElementById('searchInput').value = decodeURIComponent(query);
+        }
+    </script>
+    
 
    <div style="height: 30px;"></div> 
  <div class="bookshelves">   
-    
-  <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-    <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-    <h4>The Art Of</h4>
-    <p>By: Author Name</p>
-  </div>
-  <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-    <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-    <h4>The Art Of</h4>
-    <p>By: Author Name</p>
-  </div>
-  <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-    <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-    <h4>The Art Of</h4>
-    <p>By: Author Name</p>
-  </div>
-  <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-    <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-    <h4>The Art Of</h4>
-    <p>By: Author Name</p>
-  </div>
-  <div class="borrowed_books">
-   <div style="position: relative;">
-     <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-    <h4>Book Title</h4>
-    <p>By: Author Name</p>
-  </div >
-     <h2 class="BORROWED">BORROWED</h2>
-   </div>
-         
-        <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-          <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-          <h4>The Art Of</h4>
-          <p>By: Author Name</p>
-        </div>
-        <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-          <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-          <h4>The Art Of</h4>
-          <p>By: Author Name</p>
-        </div>
-        <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-          <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-          <h4>The Art Of</h4>
-          <p>By: Author Name</p>
-        </div>
-        <div class="book_details" onclick="navigateToPage('/user/singleBook/singleBook.html')">
-          <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" >
-          <h4>The Art Of</h4>
-          <p>By: Author Name</p>
-        </div>
-        <div class="borrowed_books">
-         <div style="position: relative;">
-           <img src="/references/images/book.jpg" alt="IMAGE-NOT-FOUND" class="book_image" onclick="navigateToPage('/user/my_information/my_information.html')">
-          <h4>Book Title</h4>
-          <p>By: Author Name</p>
-        </div >
-           <h2 class="BORROWED">BORROWED</h2>
-         </div>
+    <script>
+      ////////////////
+      getSearchBooksList();
+      //////////////////
+    </script>
                
 </div>   
     </main>

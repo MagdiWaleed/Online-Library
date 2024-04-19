@@ -12,8 +12,9 @@
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   border: 1px black solid;
   border-radius: 3px;
-
+  overflow: hidden;
 }
+
 
 
 .book_details h4 ,.borrowed_books h4{
@@ -22,7 +23,32 @@
   font-size: 20px;
   font-weight: bold;
   transition: all 1s;
-  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  width: 200px;
+  text-align: center;;
+}
+
+.overflow {
+ white-space: nowrap;
+  overflow: hidden;  
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+.overflow:hover {
+  animation: myAnim 2s linear 0s infinite normal none; 
+}
+
+@keyframes myAnim {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100px);
+	}
 }
 
 .book_details:hover h4{
@@ -31,12 +57,17 @@
 .book_details p , .borrowed_books p{
   text-align: center;
   font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  width: 200px;
+
 }
 
 
 .book_image {
   border-radius: 3px;
-  width: 100%;
+  width: 180px;
   height: 250px;
 }
 
@@ -70,11 +101,16 @@
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
   border: 1px black solid;
   border-radius: 3px;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
   
 }
 
+
 .borrowed_books img{
   margin-top: 10px;
+  margin-left: 10px;
 }
 .BORROWED {
   border-radius: 12px;
