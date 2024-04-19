@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/style/buttons.css">
     <link rel="stylesheet" href="/user/my_information/my_information_style.css">
     <script src="/script/navigation.js"></script>
+    <script src="my_information_controller.js"></script>
   
   </head>
   <body>
@@ -68,16 +69,23 @@
           </div>
          
         </form> 
-
-         <div style="margin-top: 30px;" class="buttons">
+        
+        <div style="height: 15px;"></div>
+        <button class="normal_button" id="end_user_mode_button" onclick="endUseerMode()">End User Mode</button>
+          <script >
+            AM_I_IN_USER_MODE()
+          </script>
+          
+         <div style="margin-top: 15px;" class="buttons">
             <button type="submit" class="normal_button" onclick="navigateToPage('/user/main/main.html')">Save Changes</button>
             <span style="width: 20px;"></span>
             <button class="borders_button"  onclick="navigateToPage('/user/main/main.html')">Delete Account</button></a>
           </div>
           <div style="height: 50px;"></div>
+       
         </main>
    
-    <footer>
+    <footer class="borders">
       <div class="faq">
           <h4>FAQ</h4>
          </div>
