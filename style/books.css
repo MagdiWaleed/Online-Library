@@ -67,7 +67,7 @@
 
 .book_image {
   border-radius: 3px;
-  width: 100%;
+  width: 180px;
   height: 250px;
 }
 
@@ -110,6 +110,7 @@
 
 .borrowed_books img{
   margin-top: 10px;
+  margin-left: 10px;
 }
 .BORROWED {
   border-radius: 12px;

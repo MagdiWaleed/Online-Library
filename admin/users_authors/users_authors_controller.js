@@ -33,6 +33,9 @@ class SingleUserAuthorModel{
         document.write(tableRows);
         delete s; 
     }
+
+
+    
     function HOW_IAM_HERE(){
         try{
             comingFrom=sessionStorage.getItem("users_authors_screen");
