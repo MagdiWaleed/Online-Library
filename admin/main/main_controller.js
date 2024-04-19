@@ -91,7 +91,11 @@ class SingleBookModel{
                  
       book19= new SingleBookModel("#19", "The Communist Manifesto", "The complete The Communist Manifesto by Karl Marx and Friedrich Engels, in the 1888 English version edited by Engels himself. One of the most influential political treatises of all time, The Communist Manifesto is essential reading for every student of politics and history.",
                  "#119", "Karl Marx & Friedrich Engels", "Karl Marx was born in Trier, Germany and studied law at Bonn and Berlin. In 1848, with Freidrich Engels, he finalized The Communist Manifesto. He settled in London, where he studied economics and wrote the first volume of his major work, & Friedrich Engels was born in Westphalia in 1820, the son of a textile manufacturer. After military training in Berlin, Engels already a convert to communism,  went to Manchester in 1842 to represent the family firm.",
-                 "philosophy", "null", "null", "1019", "/references/images/books/the-communist-manifesto-104.jpg");    
+                 "philosophy", "null", "null", "1019", "/references/images/books/the-communist-manifesto-104.jpg"); 
+
+       book20= new SingleBookModel("#20", "Attack On Titan", "Attack on Titan is a Japanese manga series written and illustrated by Hajime Isayama. It is set in a world where humanity is forced to live in cities surrounded by three enormous walls that protect them from gigantic man-eating humanoids referred to as Titans; the story follows Eren Yeager, who vows to exterminate the Titans",
+                 "#120", "Hajime Isayama", "Hajime Isayama is a Japanese manga artist. His first series, Attack on Titan (2009–2021), became one of the best-selling manga series of all time with 140 million copies in circulation as of November 2023",
+                 "Action Manga", "null", "null", "1020", "/references/images/books/MV5BNDFjYTIxMjct.jpg");  
      
        bookList=[
          book1
@@ -102,7 +106,7 @@ class SingleBookModel{
          ,
          book4
          ,
-         book5,book6,book7,book8,book9,book10,book11,book12,book13,book14,book15,book16,book17,book18,book19
+         book5,book6,book7,book8,book9,book10,book11,book12,book13,book14,book15,book16,book17,book18,book19,book20
        ]
      
      
