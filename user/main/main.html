@@ -60,13 +60,13 @@
       <div style="height: 20px;"></div>
      <div class="row">
       <h1 class="big_text">
-        do you have something in your mine?
+        do you have something in your mind?
       </h1>
       <div class="search_bar">
-        <input type="text" placeholder="type it here. ">
+        <input type="text" id="searchInput" placeholder="type it here. ">
         <div style="height: 20px;"></div>
-        <button class="normal_button" onclick="navigateToPage('/user/search/search.html')">Search</button>
-      </div>    
+        <button class="normal_button" onclick="navigateToPage('/user/search/search.html?query=' + encodeURIComponent(document.getElementById('searchInput').value))">Search</button> 
+    </div>      
      </div>
     </div>
   </div> 
