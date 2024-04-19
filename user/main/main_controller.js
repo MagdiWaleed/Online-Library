@@ -77,20 +77,58 @@ class SingleBookModel{
     ]
   
   
-  
-  
+  if(localStorage.getItem("isloged") == null){
+  localStorage.setItem("isloged","false");}
   
   
     function goToSingleBook(singleBookDataindex){
+       console.log("done");
+         if (localStorage.getItem("isloged") == "true"){
          console.log(singleBookDataindex);
          singleBookData=JSON.stringify(bookList[singleBookDataindex]);
           
          sessionStorage.setItem("single_book",singleBookData);
-         window.location.href="/user/SingleBook/SingleBook.html";
+         window.location.href="/user/SingleBook/SingleBook.html";}
+         else{
+              let pop_up = document.getElementById("popup");
+              pop_up.classList.add("open-popup");
+         }
          
   }
-  
-  
+  function showpopup(){
+       let pop_up = document.getElementById("popup");
+       pop_up.classList.add("open-popup");
+     }
+  function closepopup(){
+       
+       name = document.getElementById('user');
+       pass = document.getElementById('pass');
+       const storedUserDataString = localStorage.getItem(name.value);
+       console.log(localStorage.getItem(name.value));
+       if(!(storedUserDataString == null)){
+              const storedUserData = JSON.parse(storedUserDataString);
+              if(storedUserData.pass == pass.value){
+                    localStorage.setItem("isloged","true");
+                    console.log('in');
+                    let pop_up = document.getElementById("popup");
+                     pop_up.classList.remove("open-popup");
+              }
+              else{
+                     window.alert('wrong password');
+              }
+             
+       }
+       else{
+           window.alert('No user');   
+       }
+       
+
+       }
+   function closepop(){
+       console.log('wrong');
+       let pop_up = document.getElementById("popup");
+       pop_up.classList.remove("open-popup");
+   }
   
   
   

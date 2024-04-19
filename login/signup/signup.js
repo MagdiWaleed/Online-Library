@@ -10,13 +10,12 @@ function signpress(){
         window.alert('wrong entrey');
     }
     else{
-        console.log('done1');
     const userData = {
-        "name": name,
-        "pass": pass,
-        "confpass": confpass,
-        "mail": mail,
-        "check": check
+        "name": name.value,
+        "pass": pass.value,
+        "confpass": confpass.value,
+        "mail": mail.value,
+        "check": check.value
     };
     const userDataString = JSON.stringify(userData);
     localStorage.setItem(name.value, userDataString);}

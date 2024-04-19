@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="/style/buttons.css">
   <link rel="stylesheet" href="/style/textfield.css">
   <link rel="stylesheet" href="/style/books.css">
+  <link rel="stylesheet" href="pop_up.css">
   <script src="/script/navigation.js"></script>
   <script src="main_controller.js"></script>
 </head>
@@ -39,7 +40,7 @@
           <h1 id="rome">
             R O M E
           </h1>
-          <img id="account_logo" src="/references/images/R.png" alt="" onclick="navigateToPage('/user/my_information/my_information.html')">
+          <img id="account_logo" src="/references/images/R.png" alt="" onclick="showpopup()">
         </div>
         <div id="black_line"></div>
         <div id="navigation_bar" class="borders">
@@ -51,6 +52,25 @@
   </header>
   <div style="height: 50px;"></div>
   <main>
+    <div id="popup" class="login">
+      <div id="signupForm" >
+        <div class="inputtext">
+          <input id = "user" class="txtinfo" placeholder="User name" required>
+          <input id = "pass" class="txtinfo" placeholder="Password" required>
+        </div>
+        <div style="display: block; " class="checkbox">
+          <input type ="checkbox" id="check" >
+          <label for="check" style="display: inline-block; " >Admin</p>
+        </div> 
+        <button type="submit" onclick="closepopup()" class="btn">Log in</button>
+        <button type="button" class="closebtn" onclick="closepop()">X</button>
+      </div> <br>
+     
+      <a href="/login/signup/signupScreen.html" style="display: inline-block;">
+        <button class="next"> create account</button> 
+      </a>
+    </div>
+    </div>
     <div class="hero-class">
       <div>
       <h1>Welcome back to Rome Library!</h1>
