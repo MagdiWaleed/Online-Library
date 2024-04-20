@@ -1,6 +1,6 @@
 
 
-input[type="text"],input[type="email"],input[type="password"] ,textarea{
+input[type="text"],input[type="email"],input[type="password"],textarea{
     /* width: 300px; */
     max-width:300px;
     padding: 8px 70px;

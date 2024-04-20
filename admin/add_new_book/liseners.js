@@ -34,3 +34,20 @@ inputField4.addEventListener('input',function(){
 inputField5.addEventListener('input',function(){
     outputElement5.innerText=inputField5.value;
 });
+
+var fileInput = document.getElementById('image_input');
+var image = document.getElementById('book_image');
+
+fileInput.addEventListener('change', function(event) {
+  var selectedFile = event.target.files[0];
+
+  if (selectedFile) {
+
+    var reader = new FileReader();
+    reader.readAsDataURL(selectedFile);
+
+    reader.onload = function() {
+      image.src = reader.result;
+    };
+  }
+});
