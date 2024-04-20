@@ -41,5 +41,5 @@ localStorage.removeItem("user");
 localStorage.setItem("isloged","false");
 window.location.href = "/user/main/main.html";
 }
-localStorage.setItem("isloged","false");
+
 add_text();
