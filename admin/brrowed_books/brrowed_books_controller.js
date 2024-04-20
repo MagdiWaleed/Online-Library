@@ -33,7 +33,7 @@ class SingleBrrowedBookModel{
         for(i=0;i<numberOfelements;i++){
            m= new SingleBrrowedBookModel();
             m.book_id="0";
-            m.book_name= "how to treat poeple well and fuck them in the conroer";
+            m.book_name= "how to treat poeple well and make friends";
             m.book_demcription="itm a nice book";
             m.author_id=11;
             m.author_name="magdi waleed mohamed khalaf allah";

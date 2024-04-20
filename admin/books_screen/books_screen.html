@@ -38,10 +38,10 @@
               <pre>B O R R O W E D  
 B O O K S</pre>
             </button>
-            <button style="border-radius: 0 0 0 0;" class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
+            <button style="border-radius: 0 0 0 0;"  class="not_selected_page_button" onclick="navigateToPage('/admin/statistics/statistics.html')">
          S T A T I S T I C S
              </button>
-             <button style="border-radius: 0 0 50px 0;" id="selected_page_button"  onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
+             <button style="border-radius: 0 0 50px 0;"  class="not_selected_page_button" onclick="navigateToPage('/admin/about/about.html')">A B O U T</button>  
             </div>  
       </div>
     </header>
@@ -68,7 +68,7 @@ B O O K S</pre>
         
     <div class="bookshelves">   
         
-        <div class="borrowed_books" style="cursor: pointer;" onclick="navigateToPage('/admin/add_new_book/add_new_book.html')">
+        <div class="borrowed_books" style="cursor: pointer;" onclick="addNewBook()">
             <div style="position: relative;">
            </div >
               <h2 class="BORROWED add_one_card">ADD ONE</h2>
