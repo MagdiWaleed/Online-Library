@@ -1,7 +1,7 @@
 
 function signpress(){
     sign = document.getElementById('sign');
-    name = document.getElementById('user');
+    namehold = document.getElementById('user');
     pass = document.getElementById('pass');
     conf = document.getElementById('confpass');
     mail = document.getElementById('mail');
@@ -10,13 +10,22 @@ function signpress(){
         window.alert('wrong entrey');
     }
     else{
+        
     const userData = {
-        "name": name.value,
+        "name": namehold.value,
         "pass": pass.value,
         "confpass": confpass.value,
         "mail": mail.value,
-        "check": check.value
+        "check": check.checked
     };
     const userDataString = JSON.stringify(userData);
-    localStorage.setItem(name.value, userDataString);}
+    localStorage.setItem("user", userDataString);
+    localStorage.setItem("isloged","true");
+    if(check.checked == false){
+    document.getElementById('link').href = "/user/main/main.html";}
+    else{
+        document.getElementById('link').href = "/admin/main/main.html";
+    }
+}
+    
 }

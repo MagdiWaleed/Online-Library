@@ -65,6 +65,7 @@
     font-style:italic;
     font-family: Cursive;
     font-size: 20px;
+    cursor: pointer;
 }
 .checkbox{
     position: fixed;
@@ -73,6 +74,7 @@
     font-size: 20px;
     top: 80%;
     left: 10%;
+    cursor: pointer;
 
 }
 .btn{

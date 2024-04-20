@@ -95,42 +95,11 @@ class SingleBookModel{
          }
          
   }
-  function showpopup(){
-       let pop_up = document.getElementById("popup");
-       pop_up.classList.add("open-popup");
-     }
-  function closepopup(){
-       
-       name = document.getElementById('user');
-       pass = document.getElementById('pass');
-       const storedUserDataString = localStorage.getItem(name.value);
-       console.log(localStorage.getItem(name.value));
-       if(!(storedUserDataString == null)){
-              const storedUserData = JSON.parse(storedUserDataString);
-              if(storedUserData.pass == pass.value){
-                    localStorage.setItem("isloged","true");
-                    console.log('in');
-                    let pop_up = document.getElementById("popup");
-                     pop_up.classList.remove("open-popup");
-              }
-              else{
-                     window.alert('wrong password');
-              }
-             
-       }
-       else{
-           window.alert('No user');   
-       }
-       
+function checklog(){
+  if(localStorage.getItem("isloged") == false){
+       document.getElementById('my_book').style.display = "none";
+  }}
 
-       }
-   function closepop(){
-       console.log('wrong');
-       let pop_up = document.getElementById("popup");
-       pop_up.classList.remove("open-popup");
-   }
-  
-  
   
   
   

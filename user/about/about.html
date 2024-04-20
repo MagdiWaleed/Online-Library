@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/style/navigation.css">
   <link rel="stylesheet" href="about_style.css">
   <script src="/script/navigation.js"></script>
+  <link rel="stylesheet" href="/style/pop_up.css">
 
 </head>
 <body>
@@ -29,7 +30,7 @@
           <h1>
             R O M E
           </h1>
-          <img id="account_logo" src="/references/images/R.png" alt="" onclick="navigateToPage('/user/my_information/my_information.html')">
+          <img id="account_logo" src="/references/images/R.png" alt="" onclick="showpopup()">
         </div>
         <div id="black_line"></div>
         <div id="navigation_bar" class="borders">
@@ -42,6 +43,25 @@
   
     
       <main>
+        <div id="popup" class="login">
+          <div id="signupForm" >
+            <div class="inputtext">
+              <input id = "user" class="txtinfo" placeholder="User name" required>
+              <input id = "pass" class="txtinfo" placeholder="Password" required>
+            </div>
+            <div style="display: block; " class="checkbox">
+              <input type ="checkbox" id="check" >
+              <label for="check" style="display: inline-block; " >Admin</p>
+            </div> 
+            <button type="submit" onclick="closepopup()" class="btn">Log in</button>
+            <button type="button" class="closebtn" onclick="closepop()">X</button>
+          </div> <br>
+         
+          <a href="/login/signup/signupScreen.html" style="display: inline-block;">
+            <button class="next"> create account</button> 
+          </a>
+        </div>
+        </div>
         <div style="height: 30px;"></div>
     <div class="background_card">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores itaque, architecto sit saepe repellendus vitae id quibusdam recusandae enim impedit suscipit ea. Eius ab rerum autem delectus consequatur error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi, quaerat libero corporis quasi praesentium veritatis fuga, est eos nesciunt aliquid pariatur expedita facilis omnis laboriosam ullam quos quas dignissimos. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat et autem recusandae ducimus, fugit dolor repudiandae consequuntur nemo maiores pariatur nihil deleniti perspiciatis hic? Officiis unde minus placeat maiores doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, harum beatae! Ipsam, quibusdam. Fuga cum suscipit optio, aliquam nulla pariatur itaque, veritatis soluta blanditiis enim, quo libero aut vitae obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quo libero fugiat quasi possimus deleniti, eveniet, a repellendus sequi tempore eius ab saepe consectetur doloremque quis! Nulla corporis quod fugit.</p>
