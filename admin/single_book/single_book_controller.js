@@ -23,8 +23,14 @@ function editThisBook(){
 }
 
 function functionDisplayData(){
-    
     singleBookData= fetchBookData();
+    parameters=new URLSearchParams(window.location.search);
+    query= parameters.get('query');
+    if(query=="borrowed_book"){
+        document.getElementById("borrowed_by").style.display="inline-block";
+        document.getElementById("borrowed_by").innerHTML=singleBookData.user_name;
+    }
+
 
     document.getElementById("book_name").innerHTML=singleBookData.book_name;
     document.getElementById("author_name").innerHTML=singleBookData.author_name;

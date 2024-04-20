@@ -81,6 +81,8 @@ class SingleBookModel{
                  "#116", "Adolf Hitler", "Adolf Hitler was an Austrian-born German politician who was the dictator of Nazi Germany from 1933 until his suicide in 1945. He rose to power as the leader of the Nazi Party, becoming the chancellor in 1933 and then taking the title of Führer und Reichskanzler in 1934",
                  "Autobiography", "null", "null", "1016" , "/references/images/books/mein.jpg");
 
+       book16.user_name="Ahmed Mohamed Saeed";
+
        book17= new SingleBookModel("#17", "All Quiet on The Western Front", "This graphic novel recreates the classic story in vivid detail through meticulous research. The accurate depictions of uniforms, weapons, trenches, and death brings the horrors of the Western Front to life in a bold new way..",
                  "#117", "Wayne Vansant", "For more than 30 years Wayne Vansant has been writing and illustrating comics and graphic novels on historic and military subjects, beginning with Marvel's Savage Tales and The 'Nam. Since then, he has produced Days of Darkness, Battron: The Trojan Woman, Blockade, The War in Korea, Stephan Crane's The Red Badge of Courage, Normandy, Grant vs. Lee, Bombing Nazi Germany, The Battle of the Bulge, The Red Baron, and others.",
                  " War novel", "null", "null", "1017", "/references/images/books/9781682473337.jpg");
@@ -119,7 +121,12 @@ class SingleBookModel{
             singleBookData=JSON.stringify(bookList[singleBookDataindex]);
              
             sessionStorage.setItem("single_book",singleBookData);
-            window.location.href="/admin/single_book/single_book.html";
+            if(singleBookDataindex%5==0){
+              window.location.href="/admin/single_book/single_book.html?query=borrowed_book";
+            }else{
+              window.location.href="/admin/single_book/single_book.html";
+            }
+            
             
      }
      

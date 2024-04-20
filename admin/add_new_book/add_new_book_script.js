@@ -35,6 +35,10 @@ function fetchData(){
     document.getElementById('input_description').value=singleBookData.book_description;
     document.getElementById('input_about_author').value=singleBookData.about_author;
     document.getElementById('input_book_category').value=singleBookData.category;
+    document.getElementById('delete_button').style.display="inline-block";
+    document.getElementById('done_button').innerText="Save Changes";
+    
+    
     }
     else{
         document.getElementById('book_name').innerHTML="";
