@@ -20,27 +20,27 @@
     <link rel="stylesheet" href="/style/buttons.css">
     <link rel="stylesheet" href="/user/my_information/my_information_style.css">
     <script src="/script/navigation.js"></script>
-    <script src="my_information_controller.js"></script>
+    
   
   </head>
   <body>
     <header>
       <div id="backGround_image" >
         <!-- <img src="/references/images/Logo.png" alt=""> -->
-        <div id="backGround" class="borders">
-         <img id="project_logo" src="/references/images/Logo.png" alt="" onclick="navigateToPage('/user/about/about.html')">
-             <h1>
-               R O M E
-             </h1>
-             <img id="account_logo" src="/references/images/R.png" alt="" onclick="navigateToPage('/user/my_information/my_information.html')" style="border: 3px white solid;">
-           </div>
-           <div id="black_line"></div>
-           <div id="navigation_bar" class="borders">
-             <button style="border-radius: 0 0 0 50px;"class="not_selected_page_button" onclick="navigateToPage('/user/main/main.html')">H O M E</button>
-             <button style="border-radius: 0 0 0 0;"class="not_selected_page_button"  onclick="navigateToPage('/user/my_books/my_books.html')">M Y  B O O K S</button>
-             <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('/user/about/about.html')">A B O U T</button>  
-           </div>  
-       </div>
+          <div id="backGround" class="borders">
+            <img id="project_logo" src="/references/images/Logo.png" alt="" onclick="navigateToPage('/user/about/about.html')">
+            <h1>
+              R O M E
+            </h1>
+            <img id="account_logo" src="/references/images/R.png" alt="" onclick="showpopup()">
+          </div>
+          <div id="black_line"></div>
+          <div id="navigation_bar" class="borders">
+            <button style="border-radius: 0 0 0 50px;"class="not_selected_page_button" onclick="navigateToPage('/user/main/main.html')">H O M E</button>
+            <button style="border-radius: 0 0 0 0;"class="not_selected_page_button"  onclick="navigateToPage('/user/my_books/my_books.html')">M Y  B O O K S</button>
+            <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button"onclick="navigateToPage('/user/about/about.html')">A B O U T</button>  
+          </div>  
+      </div>
     </header>
     <div style="height: 30px;"></div>
       <main>  
@@ -65,7 +65,7 @@
           <div class="form-section" style="margin-bottom: 15px;">
             <label for="password">Confirm 
               Password:</label>
-            <input type="password" id="password" name="password" style="margin-right: 20px;">
+            <input type="password" id="confpassword" name="password" style="margin-right: 20px;">
           </div>
          
         </form> 
@@ -77,9 +77,9 @@
           </script>
           
          <div style="margin-top: 15px;" class="buttons">
-            <button type="submit" class="normal_button" onclick="navigateToPage('/user/main/main.html')">Save Changes</button>
+            <button type="submit" class="normal_button" onclick="save_change()">Save Changes</button>
             <span style="width: 20px;"></span>
-            <button class="borders_button"  onclick="navigateToPage('/user/main/main.html')">Delete Account</button></a>
+            <button class="borders_button"  onclick="delete_acc()">Delete Account</button></a>
           </div>
           <div style="height: 50px;"></div>
        
@@ -97,6 +97,6 @@
         <p class="foottext">&copy; 2024 Rome Library</p>
       </div>
     </footer>
-
+    <script src="my_information_controller.js"></script>
   </body>
 </html>
