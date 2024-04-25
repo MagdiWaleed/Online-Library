@@ -178,5 +178,5 @@ function getTheBooksList  (){
         else{
             document.getElementById("owner_text").innerHTML="[some erro occur]: "+document.getElementById("owner_text").innerHTML;
         }
-    console.log(document.getElementById("owner_text").innerHTML);
+//     console.log(document.getElementById("owner_text").innerHTML);
   }

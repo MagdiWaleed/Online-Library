@@ -118,8 +118,8 @@ class SingleBookModel{
      
        function goToSingleBook(singleBookDataindex){
             console.log(singleBookDataindex);
-            singleBookData=JSON.stringify(bookList[singleBookDataindex]);
-             
+            singleBookData=JSON.stringify(bookList[singleBookDataindex]); 4
+       
             sessionStorage.setItem("single_book",singleBookData);
             if(singleBookDataindex%5==0){
               window.location.href="/admin/single_book/single_book.html?query=borrowed_book";

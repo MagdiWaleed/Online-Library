@@ -43,8 +43,8 @@ class SingleUserAuthorModel{
             console.log(error);
             comingFrom="";
         }
-        console.log(comingFrom);
-        console.log(document.getElementById("owner_text").value)
+        // console.log(comingFrom);
+        // console.log(document.getElementById("owner_text").value)
         if(comingFrom=="show_users_button"){
             document.getElementById("owner_text").innerHTML="Users Brrowed books";
         }

@@ -10,7 +10,6 @@ class SingleBrrowedBookModel{
     this.brrowedDate-brrowedDate;
     this.user_name=user_name;
     this.user_id=user_id;
-
     }
   }
   
@@ -46,7 +45,6 @@ class SingleBrrowedBookModel{
              
         }
         document.write(tableRows);
-        delete s; 
     }
    
 function goingToSingleBook(){

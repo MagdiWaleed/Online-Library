@@ -21,7 +21,7 @@ function add_text(){
     mailhold = document.getElementById('email');
     passhold = document.getElementById('password');
     confpasshold = document.getElementById('confpassword');
-    const storedUserDataString = localStorage.getItem("user");
+    const storedUserDataString = sessionStorage.getItem("user");
     const storedUserData = JSON.parse(storedUserDataString);
     console.log(storedUserData["name"]);
     nameZep.placeholder = storedUserData["name"];
@@ -47,12 +47,12 @@ function save_cahnge(){
         "mail": mail.value,
     };
     const userDataString = JSON.stringify(userData);
-    localStorage.setItem("user", userDataString);}
-    console.log(localStorage.getItem("user"));
+    sessionStorage.setItem("user", userDataString);}
+    console.log(sessionStorage.getItem("user"));
 }
 function delete_acc(){
-localStorage.removeItem("user");
-localStorage.setItem("isloged","false");
+sessionStorage.removeItem("user");
+sessionStorage.setItem("isloged","false");
 window.location.href = "/user/main/main.html";
 }
 add_text();

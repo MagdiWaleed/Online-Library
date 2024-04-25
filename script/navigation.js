@@ -2,10 +2,12 @@ function navigateToPage(url){
     window.location.href=url;
 }
 function showpopup(){
-    if(localStorage.getItem("isloged") == "true"){
+    console.log("this is login "+ sessionStorage.getItem('isloged'))
+    if(sessionStorage.getItem("isloged") == "true"){
         console.log("im here ");
-        const storedUserDataString = localStorage.getItem("user");
+        const storedUserDataString = sessionStorage.getItem("user");
         const storedUserData = JSON.parse(storedUserDataString);
+        console.log(sessionStorage.getItem("user_mode"));
         console.log(storedUserData.check);
         if( sessionStorage.getItem("user_mode")=="enable"){
             navigateToPage("/user/my_information/my_information.html");
@@ -17,7 +19,7 @@ function showpopup(){
                 "check": "admin"
             };
             const userDataString = JSON.stringify(userData);
-            localStorage.setItem("user", userDataString);
+            sessionStorage.setItem("user", userDataString);
         }
         else if(storedUserData.check == false){
         
@@ -34,13 +36,13 @@ function closepopup(){
     name = document.getElementById('user');
     pass = document.getElementById('pass');
     check = document.getElementById('check');
-    const storedUserDataString = localStorage.getItem("user");
-    console.log(localStorage.getItem("user"));
+    const storedUserDataString = sessionStorage.getItem("user");
+    console.log(sessionStorage.getItem("user"));
     if(!(storedUserDataString == null)){
            const storedUserData = JSON.parse(storedUserDataString);
            if(storedUserData.pass == pass.value){
                   if(check.checked == false){
-                 localStorage.setItem("isloged","true");
+                 sessionStorage.setItem("isloged","true");
                  console.log('in');
                  let pop_up = document.getElementById("popup");
                   pop_up.classList.remove("open-popup");}

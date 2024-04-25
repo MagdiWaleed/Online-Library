@@ -19,8 +19,8 @@ function signpress(){
         "check": check.checked
     };
     const userDataString = JSON.stringify(userData);
-    localStorage.setItem("user", userDataString);
-    localStorage.setItem("isloged","true");
+    sessionStorage.setItem("user", userDataString);
+    sessionStorage.setItem("isloged","true");
     if(check.checked == false){
     document.getElementById('link').href = "/user/main/main.html";}
     else{
