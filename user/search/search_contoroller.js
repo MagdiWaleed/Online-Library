@@ -189,6 +189,3 @@ class SingleBookModel{
           document.write(bookCardsList);
   }
   
-  function getNumberOfBooks(){
-    document.getElementById("number_of_books").innerHTML=bookList.length;
-  }
