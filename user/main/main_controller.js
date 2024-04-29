@@ -72,7 +72,7 @@ class SingleBookModel{
       book14= new SingleBookModel("#14", "The Book Thief", " A moving historical novel set during World War II, narrated by Death.",
            "#114", "Markus Zusak", "  Australian writer known for his unique narrative style.",
            "   Historical Fiction", "null", "null", "1014", "/references/images/books/914cHl9v7oL._AC_UF1000,1000_QL80_.jpg");
-     
+
       book15= new SingleBookModel("#15", "The Catch-22", " A satirical war novel highlighting the absurdity of bureaucracy and military rules.",
                  "#115", "Joseph Heller", "  American author and playwright.",
                  "   Satire", "null", "null", "1015", "/references/images/books/4f339fc1d3b37ecb39b521b0a70c3be3.png");
@@ -135,8 +135,9 @@ class SingleBookModel{
          
   }
 function checklog(){
-  if(sessionStorage.getItem("isloged") == false){
-       document.getElementById('my_book').style.display = "none";
+ console.log(sessionStorage.getItem('isloged'));
+  if(sessionStorage.getItem("isloged") == "true"){
+       document.getElementById('my_book').style.display = "inline-block";
   }}
 
   
@@ -164,7 +165,7 @@ function checklog(){
        book_details_layer="<h4>"+singleBookData.book_name+"</h4><p>By: "+singleBookData.author_name+"</p></div>"
        return image_layer+book_details_layer;
      }
-
+     
   /////////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////////
   /* <div class="borrowed_books">
@@ -222,7 +223,6 @@ function checklog(){
    }
    document.write(bookCardsList);
   }
-  
   
   
   
