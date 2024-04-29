@@ -14,7 +14,7 @@ class SingleBrrowedBookModel{
   }
   
   
-  var rowDetails="<tr class='odd'>  <td><div onclick=\"goingToSingleBook()\">how to win friends</div></td><td><div>self-develop</div></td><td><div onclick=\"goingToSingleAuthor()\">Dial C</div></td><td><div onclick=\"goingToSingleUser()\">Magdi </div></td><td><div>10/2/2022</div></td></tr>";
+//   "<tr class='odd'>  <td><div onclick="goingToSingleBook()">how to win friends</div></td><td><div>self-develop</div></td><td><div onclick="goingToSingleAuthor()">Dial C</div></td><td><div onclick="goingToSingleUser()">Magdi </div></td><td><div>10/2/2022</div></td></tr>";
 
   function buildSingleRow(isEven,singleBrrowedBookData){
     backgroundStyle="odd";
