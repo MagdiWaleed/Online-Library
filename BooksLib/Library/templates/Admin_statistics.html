@@ -1,0 +1,39 @@
+{% extends "Admin_base.html" %}
+{% load static %}
+
+
+
+{% block style_js_title %}
+  <link rel="stylesheet" href="{% static 'CSS/Admin_statistics_style.css' %}">
+  <title>Statistics - Rome Library</title>
+  <script src="{% static 'JS/Admin_statistics_controller.js' %}"></script>
+  {% endblock %}
+
+
+{% block content %}
+  <main>
+
+        <div class="search_card">
+          <p># Of Books: 500</p>
+          <button class="normal_button" onclick="navigateToPage('Admin_books_screen.html')" >Show Details</button>
+          </div>
+
+
+        <div class="search_card">
+          <p># Of Users: 500</p>
+          <button class="normal_button" onclick="numberOfUsersDetails()" >Show Details</button>
+          </div>
+
+          <div class="search_card">
+          <p># Of AuthorsS: 500</p>
+            <button class="normal_button" onclick="numberOfAuthorsDetails()" >Show Details</button>
+          </div>
+
+          <div class="search_card">
+          <p># Of Borrowed Book: 500</p>
+            <button class="normal_button" onclick="navigateToPage('Admin_brrowed_books.html')" >Show Details</button>
+        </div>
+        <div style="height: 30px;"></div>
+
+  </main>
+{% endblock %}

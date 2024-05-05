@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <title>Sign Up - Rome Library</title>
+    <link rel="icon" type="image/png" href="{% static 'Media\favicon2.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/Signup.css' %}" >
+    <link rel="stylesheet" href="{% static 'CSS/Global_footer.css' %}">
+
+    <link rel="stylesheet" href="{% static 'CSS/User_main_style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Global_navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Global_buttons.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Global_dimension.css' %}">
+    <script src="{% static 'JS/Signup.js' %}"></script>
+    <script src="{% static 'JS/Global_navigation.js' %}"></script>
+  </head>
+<body class="back">
+  <header>
+    <div id="backGround_image" >
+      <!-- <img src="/references/images/Logo.png" alt=""> -->
+        <div id="backGround" class="borders">
+          <img id="project_logo" src="{% static 'Media\Logo.png' %}" alt="" onclick="navigateToPage('User_about.html')">
+          <h1>
+            R O M E
+          </h1>
+          <img id="account_logo" src="{% static 'Media\R.png' %}" alt="" onclick="navigateToPage('User_my_information.html')">
+        </div>
+        <div id="black_line"></div>
+        <div id="navigation_bar" class="borders">
+          <button style="border-radius: 0 0 0 50px;"class="not_selected_page_button" onclick="navigateToPage('User_main.html')">H O M E</button>
+          <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('User_about.html')">A B O U T</button>  
+        </div>  
+    </div>
+  </header>
+    <div style="height: 50px;"></div>
+  <main >
+        <div >
+          <img src= "{% static 'Media\Logo.png' %}" class="conteinr">
+            <div class="formcont">
+              <div class="inputtext">
+                <input type ="text" class="info" id = "user"placeholder="username" required>
+                <input type ="password" class="info" id = "pass" placeholder="password" required>
+                <input type ="password" class="info" id ="confpass" placeholder="confirm password" required>
+                <input type ="text" class="info" id = "mail" placeholder="email" required>
+              </div>
+              <div style="display: block; " class="checkbox">
+                <input type ="checkbox" id = "check" >
+                <label for="check">Admin</label>
+              </div>
+              <br>
+              <a href="#" style="display: block;" id ="link">
+                <button class="next" id = "signbtn" onclick="signpress()"> Sign up</button>
+              </a> 
+            </div>
+      
+            
+          </img> 
+        </div>
+  </main>
+  
+      
+</body>
+</html>
