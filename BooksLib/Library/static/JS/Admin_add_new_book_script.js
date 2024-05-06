@@ -1,5 +1,41 @@
 // Admin_add_new_book_script.js
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.querySelector("form");
 
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var formData = new FormData();
+        formData.append('book_name', document.getElementById('input_book_name').value);
+        formData.append('book_description', document.getElementById('input_description').value);
+        formData.append('author_name', document.getElementById('input_author_name').value);
+        formData.append('about_author', document.getElementById('input_about_author').value);
+        formData.append('category', document.getElementById('input_book_category').value);
+        //formData.append('image', document.getElementById('image_input').files[0]);
+
+        var formDataStr = new URLSearchParams(formData).toString();
+        console.log(formData);
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // Success, do something
+                    alert(xhr.responseText);
+                } else {
+                    // Error handling
+                    alert(xhr.responseText);
+                }
+            }
+        };
+        xhr.open("POST", form.action);
+        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken')); // function to get CSRF token
+
+        //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(formData);
+    });
+});
+/*
 document.getElementById('add_new_book_form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
   
@@ -14,7 +50,7 @@ document.getElementById('add_new_book_form').addEventListener('submit', function
 
   // Send AJAX request
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/add_new_book/');
+  xhr.open('POST', '/addBook/');
   
   // Set CSRF token in the request header
   xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken')); // function to get CSRF token
@@ -23,15 +59,15 @@ document.getElementById('add_new_book_form').addEventListener('submit', function
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
               // Success, do something
-              console.log(xhr.responseText);
+              console.alert(xhr.responseText);
           } else {
               // Error handling
-              console.error(xhr.responseText);
+              console.alert(xhr.responseText);
           }
       }
   };
   xhr.send(formData);
-});
+});*/
 
 // Function to get CSRF token from cookies
 function getCookie(name) {

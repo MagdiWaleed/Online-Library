@@ -48,15 +48,15 @@ class SingleBrrowedBookModel{
     }
    
 function goingToSingleBook(){
-    window.location ='Admin_single_book.html';
+    window.location.href ='Admin_single_book.html';
 }
 function goingToSingleUser(){
     sessionStorage.setItem("Admin_single_user_author","users_table");  //user_table this is the value we are storing it into single_user_author storage to retrive it latly
-    window.location ="Admin_single_user_author.html";
+    window.location.href ="Admin_single_user_author.html";
 }
 function goingToSingleAuthor(){
     sessionStorage.setItem("Admin_single_user_author","authors_table");  //user_table this is the value we are storing it into single_user_author storage to retrive it latly
-    window.location ="Admin_single_user_author.html";
+    window.location.href ="Admin_single_user_author.html";
 }
 
   

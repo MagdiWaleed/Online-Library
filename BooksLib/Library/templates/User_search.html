@@ -1,54 +1,21 @@
+{% extends "User_base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search - Rome Library</title>
-    <link rel="icon" type="image/png" href="{% static 'Media\favicon2.png' %}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  
-    <link rel="stylesheet" href="{% static 'CSS/Global_dimension.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/Global_footer.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/Global_text.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/Global_navigation.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/Global_buttons.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/Global_textfield.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/Global_books.css' %}">
+
+
+{% block style_js_title %}
+    <title>Search - Rome Library</title>
     <link rel="stylesheet" href="{% static 'CSS/User_search_style.css' %}">
-    <script src="{% static 'JS/Global_navigation.js' %}"></script>
     <script src="{% static 'JS/User_search_contoroller.js' %}"></script>
-  
-  </head>
-  <body>
-    <header>
-      <div id="backGround_image" >
-        <!-- <img src="/references/images/Logo.png" alt=""> -->
-        <div id="backGround" class="borders">
-          <img id="project_logo" src="{% static 'Media\Logo.png' %}" alt="" onclick="navigateToPage('User_about.html')">
-          <h1>
-                R O M E
-              </h1>
-              <img id="account_logo" src="{% static 'Media\R.png' %}" alt="" onclick="navigateToPage('User_my_information.html')">
-        </div>
-        <div id="black_line"></div>
-            <div id="navigation_bar" class="borders">
-              <button style="border-radius: 0 0 0 50px;"class="not_selected_page_button" onclick="navigateToPage('User_main.html')">H O M E</button>
-              <button style="border-radius: 0 0 0 0;"class="not_selected_page_button"  onclick="navigateToPage('User_my_books.html')">M Y  B O O K S</button>
-              <button style="border-radius: 0 0 50px 0;" class="not_selected_page_button" onclick="navigateToPage('User_about.html')">A B O U T</button>  
-            </div>  
-        </div>
-    </header>
-  
-    <main>
-      <div style="height: 20px;"></div>
-      <form id="search_section">
-        <input type="text" id="searchInput" placeholder="Search" style="width: 400px;">
-        <div style="width: 10px;"> </div>
-        <button class="normal_button" style="width: 150px;">Search</button>
+{% endblock %}
+
+{% block content %}
+  <main>
+    <div style="height: 20px;"></div>
+    <form id="search_section">
+      <input type="text" id="searchInput" placeholder="Search" style="width: 400px;">
+      <div style="width: 10px;"> </div>
+      <button class="normal_button" style="width: 150px;">Search</button>
     </form>
     
     <script>
@@ -62,29 +29,13 @@
     </script>
     
 
-   <div style="height: 30px;"></div> 
- <div class="bookshelves">   
-    <script>
-      ////////////////
-      getSearchBooksList();
-      //////////////////
-    </script>
-               
-</div>   
-    </main>
-    <div style="height: 35px;"></div> 
-    <footer class="borders">
-      <h4 class="foottext">R O M E</h4>
-     <h5 class="foottext">Where you can find the greatest books of all time!</h5>
-  <div class="contact-links">
-    <a href="#">Contact Us</a>
-    <a href="#">FAQ</a>
-    <a href="#">Support</a>
-  </div>
-  <div class="copyright">
-    <p class="foottext">&copy; 2024 Rome Library</p>
-  </div>
-</footer>
-  </body>
-  </html>
-  
+    <div style="height: 30px;"></div> 
+    <div class="bookshelves">   
+      <script>
+        ////////////////
+        getSearchBooksList();
+        //////////////////
+      </script>
+    </div>   
+  </main>
+{% endblock %}

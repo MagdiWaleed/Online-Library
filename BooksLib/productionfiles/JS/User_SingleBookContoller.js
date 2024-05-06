@@ -34,10 +34,10 @@ function functionDisplayData(){
     
     if(singleBookData.image=="#"){
         
-    document.getElementById("book_image").src='../Media/default-book-cover.jpg';
+    document.getElementById("book_image").src="static/Media/default-book-cover.jpg";
     }
     else{
-        document.getElementById("book_image").src=singleBookData.image;
+        document.getElementById("book_image").src="/static/" + singleBookData.image;
 
     }
     }

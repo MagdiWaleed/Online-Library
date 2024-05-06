@@ -121,7 +121,7 @@ class SingleBookModel{
          singleBookData=JSON.stringify(bookList[singleBookDataindex]);
           
          sessionStorage.setItem("single_book",singleBookData);
-         window.location ="Admin_single_book.html";
+         window.location.href ="Admin_single_book.html";
          
   }
   
@@ -142,7 +142,7 @@ class SingleBookModel{
   // var bookCard="  <div class='book_details' onclick=''><img url(Media/book.jpg' alt='IMAGE-NOT-FOUND' class='book_image' ><h4>The Art Of</h4><p>By: Author Name</p></div>";
   
   function buildBookCard(singleBookData , index){
-    image_layer="<div class='book_details ' onclick=\"goToSingleBook('"+index+"')\"><img src='{% static '" + singleBookData.image + "' %}' alt='IMAGE-NOT-FOUND' class='book_image' >";
+    image_layer="<div class='book_details ' onclick=\"goToSingleBook('"+index+"')\"><img src=\"/static/" + singleBookData.image+ "\"  alt='IMAGE-NOT-FOUND' class='book_image' >";
     book_details_layer="<h4>"+singleBookData.book_name+"</h4><p>By: "+singleBookData.author_name+"</p></div>"
     return image_layer+book_details_layer;
   }
@@ -162,7 +162,7 @@ class SingleBookModel{
   
   function buildBrrowedBookCard(singleBookData, index){
    first_layer="<div class='borrowed_books' onclick=\"goToSingleBook('"+index+"')\"><div style='position: relative;' >";
-   image_layer="<img src= \"{% static'"+singleBookData.image+"' %}\"  alt='IMAGE-NOT-FOUND' class='book_image'/>";
+   image_layer="<img src=\"/static/" + singleBookData.image+ "\"   alt='IMAGE-NOT-FOUND' class='book_image'/>";
    book_details_layer="<h4>"+singleBookData.book_name+"</h4>"+"<p>By:"+singleBookData.author_name+"</p></div ><h2 class='BORROWED'>BORROWED</h2></div>";
   return first_layer+image_layer+book_details_layer;
   }
@@ -172,7 +172,7 @@ class SingleBookModel{
           
            for(var i in bookList){
             if(bookList[i].image=="#"){
-                  bookList[i].image= "{% static 'Media/default-book-cover.jpg' %}";
+                  bookList[i].image= "/static/Media/default-book-cover.jpg";
             }
               if(i%5==0){
                   bookCardsList+=" "+buildBrrowedBookCard(bookList[i],i);

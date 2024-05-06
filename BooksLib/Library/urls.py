@@ -169,9 +169,9 @@ urlpatterns = [
     path('User_search.html', views.User_search),
     path('User_SingleBook.html', views.User_SingleBook),
 
-    path('/add_new_book/', views.add_new_book, name='add_new_book'),
-    path('add_new_book/', views.add_new_book, name='add_new_book'),
-    path('add_new_book', views.add_new_book, name='add_new_book'),
-    path('/add_new_book', views.add_new_book, name='add_new_book'),
+    path('/addBook/', views.addBook, name='addBook'),
+    path('addBook/', views.addBook, name='addBook'),
+    path('addBook', views.addBook, name='addBook'),
+    path('/addBook', views.addBook, name='addBook'),
 
 ]

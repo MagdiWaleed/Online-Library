@@ -74,7 +74,7 @@ class SingleUserAuthorModel{
             goingToSinlgeMemberScreenFrom="[some error occur]";
         }
         sessionStorage.setItem("single_user_author",goingToSinlgeMemberScreenFrom);
-        window.location ="Admin_single_user_author.html"
+        window.location.href ="Admin_single_user_author.html"
     }
    
 

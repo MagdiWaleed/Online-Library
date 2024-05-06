@@ -20,20 +20,24 @@ from django.db import models
      }
      """
 
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 class SingleBookModel(models.Model):
-    id = models.AutoField(primary_key=True)
+    # Use a unique identifier for author (consider UUID for better distribution)
+    author = models.ForeignKey('Author', on_delete=models.CASCADE)
+
     book_name = models.CharField(max_length=100)
     book_description = models.TextField()
-    author_id = models.IntegerField()
-    author_name = models.CharField(max_length=100)
     about_author = models.TextField()
     category = models.CharField(max_length=100)
     brrowed_date = models.DateField()
     user_name = models.CharField(max_length=100)
-    useer_id = models.IntegerField()
-    image = models.ImageField(upload_to='images/')
+    user_id = models.IntegerField()
+    #image = models.ImageField(upload_to='Media/books/', blank=True, null=True)  # Upload to 'books/' subdirectory in static/media
 
     def __str__(self):
-        return f"{ self.id} { self.book_name} {self.author_name} {self.category} {self.brrowed_date} "
-    
-
+        return f"{self.book_name} by {self.author.name} ({self.category})"

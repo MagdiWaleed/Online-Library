@@ -117,7 +117,7 @@ class SingleBookModel{
        singleBookData=JSON.stringify(bookList[singleBookDataindex]);
         
        sessionStorage.setItem("single_book",singleBookData);
-       window.location ="Admin_single_book.html";
+       window.location.href ="Admin_single_book.html";
        
 }
 
@@ -138,7 +138,7 @@ class SingleBookModel{
 // var bookCard="  <div class='book_details' onclick=''><img src='Media/book.jpg' alt='IMAGE-NOT-FOUND' class='book_image' ><h4>The Art Of</h4><p>By: Author Name</p></div>";
 
 function buildBookCard(singleBookData , index){
-  image_layer="<div class='book_details ' onclick=\"goToSingleBook('"+index+"')\"><img src='{% static '" + singleBookData.image+ "' %}' alt='IMAGE-NOT-FOUND' class='book_image' >";
+  image_layer="<div class='book_details ' onclick=\"goToSingleBook('"+index+"')\"><img src=\"/static/" + singleBookData.image+ "\"  alt='IMAGE-NOT-FOUND' class='book_image' >";
   book_details_layer="<h4>"+singleBookData.book_name+"</h4><p>By: "+singleBookData.author_name+"</p></div>"
   return image_layer+book_details_layer;
 }
