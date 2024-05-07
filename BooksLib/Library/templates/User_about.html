@@ -1,13 +1,16 @@
+{% extends "User_base.html" %}
+{% load static %}
 
-/////////////////
+
+
+{% block style_js_title %}
   <title>About - Rome Library</title>
   <link rel="stylesheet" href="{% static 'CSS/Global_pop_up.css' %}">
   <link rel="stylesheet" href="{% static 'CSS/User_main_style.css' %}">
   <link rel="stylesheet" href="{% static 'CSS/User_about_style.css' %}">
-//////////////////
+{% endblock %}
 
-
-
+{% block content %}
   <main>
     <div id="popup" class="login">
           <div id="signupForm" >
@@ -42,4 +45,4 @@
 
     </div>
   </main>
-
+{% endblock %}

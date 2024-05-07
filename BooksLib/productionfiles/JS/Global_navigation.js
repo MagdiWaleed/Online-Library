@@ -1,5 +1,5 @@
 function navigateToPage(url){
-    window.location.href=url;
+    window.location.href="../"+url;
 }
 function showpopup(){
     console.log("this is login "+ sessionStorage.getItem('isloged'))

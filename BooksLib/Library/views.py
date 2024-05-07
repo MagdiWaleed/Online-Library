@@ -9,6 +9,7 @@ from django.http import JsonResponse, HttpResponseBadRequest
 from django.core.exceptions import ValidationError
 from django.core.exceptions import ValidationError
 from django.utils.datastructures import MultiValueDict
+from django.http import JsonResponse
 
 
 
@@ -51,9 +52,12 @@ def Admin_single_user_author(request):
   return HttpResponse(template.render())
 
 def Admin_statistics(request):
-  template = loader.get_template('Admin_statistics.html')
-  return HttpResponse(template.render())
-
+  total_books = SingleBookModel.objects.count()
+  borrowed_books = SingleBookModel.objects.exclude(user_id=None).count()
+  unique_authors = SingleBookModel.objects.values_list('author_name', flat=True).distinct().count()
+  context = {'total_books': total_books,  'unique_authors': unique_authors, 'borrowed_books': borrowed_books}
+  return render(request, 'Admin_statistics.html', context)
+  
 def Admin_users_authors(request):
   template = loader.get_template('Admin_users_authors.html')
   return HttpResponse(template.render())
@@ -91,59 +95,51 @@ def User_SingleBook(request):
   return HttpResponse(template.render())
 
 
-def addBook1(request):
-  if request.method == 'POST':
-    try:
-      book_name = request.POST.get('book_name')
-      book_description = request.POST.get('book_description')
-      author_name = request.POST.get('author_name')
-      about_author = request.POST.get('about_author')
-      category = request.POST.get('category')
-      image = request.FILES.get('image')
-      # Save data to database
-      new_book = SingleBookModel.objects.create(
-          book_name=book_name,
-          book_description=book_description,
-          author_name=author_name,
-          about_author=about_author,
-          category=category,
-          image=image )
-      return JsonResponse({'status': 'success', 'message': 'Book added successfully'})
-    except Exception as e:
-      return JsonResponse({'status': 'error', 'message': str(e)})
-  return render(request,'Admin_add_new_book.html')
-
-#  the reques is a string book_name=value&book_description=value&author_name=value&about_author=value&category=value&image=value
-import json
-from django.http import JsonResponse, HttpResponseBadRequest
-from django.core.exceptions import ValidationError
+from django.conf import settings
+import os
 
 def addBook(request):
     if request.method == 'POST':
         try:
-            # Access form data directly (may not include content type)
             data_dict = request.POST.dict()
-
             book_name = data_dict.get('book_name')
             book_description = data_dict.get('book_description')
             author_name = data_dict.get('author_name')
             about_author = data_dict.get('about_author')
             category = data_dict.get('category')
+            image = request.FILES.get('image')
+            
 
-            # Validate data (optional, consider using Django forms for comprehensive validation)
             if not book_name or not book_description or not author_name or not about_author or not category:
                 raise ValidationError('Missing required fields.')
-            # Handle the case where no image is uploaded (optional)
+
             new_book = SingleBookModel.objects.create(
-            book_name=book_name,
-            book_description=book_description,
-            author_name=author_name,
-            about_author=about_author,
-            category=category
-                )
+                book_name=book_name,
+                book_description=book_description,
+                author_name=author_name,
+                about_author=about_author,
+                category=category
+            )
+
+            if image:
+                # Save the image to the media folder
+                image_name = os.path.join(settings.MEDIA_ROOT, 'images', image.name)
+                with open(image_name, 'wb+') as destination:
+                    for chunk in image.chunks():
+                        destination.write(chunk)
+                # Update the new_book object with image path
+                new_book.image = os.path.join('images', image.name)
+                new_book.save()
 
             return JsonResponse({'status': 'success', 'message': 'Book added successfully'})
-
         except (ValidationError, Exception) as e:
             return JsonResponse({'status': 'error', 'message': str(e)})
+
+def get_books_api(request):
+    books = SingleBookModel.objects.all()
+    serialized_books = [book.serialize() for book in books]
+    return JsonResponse(serialized_books, safe=False)
+
+
+
 

@@ -4,7 +4,7 @@
 
 
 {% block style_js_title %}
-    <script src="{% static 'JS/Admin_main_controller.js' %}"></script>
+    <script src="{% static 'JS/Admin_main_controller.js' %}" defer ></script>
     <title>Main - Rome Library</title>
     <link rel="stylesheet" href="{% static 'CSS/Admin_main_style.css' %}">
 {% endblock %}
@@ -20,26 +20,21 @@
     <div style="height: 20px;"></div>
     <div>
       <div class="row"><h1 style="height: 40px;">Latest Books</h1> 
-        <button class="normal_button edit_button" onclick="navigateToPage('Admin_books_screen.html?pressedButton=latest')">Edit Latest</button>
-      </div>        
-      <div class="bookshelves">   
-        <script>
-          /////////////////////////////////////////////
-          getLatestBooksList(20);
-          /////////////////////////////////////////////
-          </script>     
+        <button class="normal_button edit_button" onclick="navigateToPage('Admin_books_screen?pressedButton=latest')">Edit Latest</button>
+      </div> 
+      
+      
+      <div class="bookshelves" id="bookshelvesL">   
+  
       </div>
       <hr style="margin: 50px 0;"/>
+
       <div>
         <div class="row"><h1 style="height: 40px;">Trending Books</h1> 
-          <button class="normal_button edit_button" onclick="navigateToPage('Admin_books_screen.html?pressedButton=trending')">Edit Trending</button>
+          <button class="normal_button edit_button" onclick="navigateToPage('Admin_books_screen?pressedButton=trending')">Edit Trending</button>
         </div>
-        <div class="bookshelves">   
-          <script>
-          /////////////////////////////////////////////////
-            getTrendingBooksList(10);
-          /////////////////////////////////////////////\
-          </script>
+        <div class="bookshelves" id="bookshelvesT">   
+
         </div>  
     <div style="height: 20px;"> </div>
   </main>

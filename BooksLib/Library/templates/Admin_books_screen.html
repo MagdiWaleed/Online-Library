@@ -6,7 +6,7 @@
 {% block style_js_title %}
     <title>Books - Rome Library</title>
     <link rel="stylesheet" href="{% static 'CSS/Admin_books_screen_style.css' %}">
-    <script src="{% static 'JS/Admin_books_screen_controller.js' %}"></script>
+    <script src="{% static 'JS/Admin_books_screen_controller.js' %}"  defer ></script>
 {% endblock %}
 
 {% block content %}
@@ -28,18 +28,13 @@
     }
   </script>
   
-  <div class="bookshelves">   
+  <div class="bookshelves" id="bookshelves">   
     <div class="borrowed_books" style="cursor: pointer;" onclick="addNewBook()">
       <div style="position: relative;">
       </div >
       <h2 class="BORROWED add_one_card">ADD ONE</h2>
     </div>
-    <script>
-      ////////////////////////////
-      getTheBooksList()
-      ////////////////////////////
-    </script>
-
+ 
   </div>   
   <br>
 </main>
