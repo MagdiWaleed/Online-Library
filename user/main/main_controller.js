@@ -111,7 +111,7 @@ class SingleBookModel{
   
   
   
-  
+  m = "{'name':'magdi ','age':12, }"
   
   
  
@@ -134,6 +134,8 @@ class SingleBookModel{
          }
          
   }
+
+
 function checklog(){
  console.log(sessionStorage.getItem('isloged'));
   if(sessionStorage.getItem("isloged") == "true"){

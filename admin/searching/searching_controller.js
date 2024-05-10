@@ -182,6 +182,9 @@ function getTheBooksList  (){
         document.write(bookCardsList);
 }
 
+
+
+
   function getTheTextForSearching(){
     try{
        storedDataString =sessionStorage.getItem("search");

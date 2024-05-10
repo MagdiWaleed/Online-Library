@@ -40,7 +40,8 @@ class SingleBrrowedBookModel{
             m.about_author="he im good autoher";
             m.umer_id=0;
             m.user_name="ahmed alla"; 
-            m.brrowedDate="2004/9/8"
+            m.brrowedDate="2004/9/8";
+
             tableRows+=" "+buildSingleRow(i%2==0,m);
              
         }

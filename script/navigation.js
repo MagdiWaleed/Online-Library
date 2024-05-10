@@ -8,7 +8,7 @@ function showpopup(){
         const storedUserDataString = sessionStorage.getItem("user");
         const storedUserData = JSON.parse(storedUserDataString);
         console.log(sessionStorage.getItem("user_mode"));
-        console.log(storedUserData.check);
+        console.log("this is a check  "+storedUserData.check);
         if( sessionStorage.getItem("user_mode")=="enable"){
             navigateToPage("/user/my_information/my_information.html");
             const userData = {

@@ -38,9 +38,9 @@ function save_cahnge(){
     console.log(sessionStorage.getItem("user"));
 }
 function delete_acc(){
-sessionStorage.removeItem("user");
-sessionStorage.setItem("isloged","false");
-window.location.href = "/user/main/main.html";
+    sessionStorage.removeItem("user");
+    sessionStorage.setItem("isloged","false");
+    window.location.href = "/user/main/main.html";
 }
 
 add_text();
