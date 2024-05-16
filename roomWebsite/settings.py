@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-tex^&!rfwcj5$(rm22329i83*k0&ou&cr1)l%rc=@ohsqb+aqk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', 'almahil.com.app', '*.app', '.almahil.app','library.almahil.com', '127.0.0.1', 'localhost', '.now.sh', '*']
 
 
 # Application definition
@@ -86,8 +86,7 @@ WSGI_APPLICATION = 'roomWebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
     }
 }
 
@@ -132,8 +131,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static"),
     os.path.join(BASE_DIR,'books/static'),
+    os.path.join(BASE_DIR,'filtering/static'),
+    os.path.join(BASE_DIR,'profileModel/static'),
     
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'productionfiles' , 'static')
 
 
 MEDIA_URL='/media/'
