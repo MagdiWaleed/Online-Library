@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-tex^&!rfwcj5$(rm22329i83*k0&ou&cr1)l%rc=@ohsqb+aqk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'almahil.com.app', '*.app', '.almahil.app','library.almahil.com', '127.0.0.1', 'localhost', '.now.sh', '*']
+ALLOWED_HOSTS = ['.vercel.app', 'almahil.com.app', '*.app', '.almahil.app','library.almahil.com', '127.0.0.1', 'localhost', '.now.sh', 'render.com', '*']
 
 
 # Application definition
@@ -62,7 +62,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / "templates",
-                 BASE_DIR / "books" / "templates"
+                 BASE_DIR / "books" / "templates",
+                 BASE_DIR / "filtering" / "templates",
+                 BASE_DIR / "profileModel" / "templates"
+
                  
                  ],
         'APP_DIRS': True,
@@ -90,7 +93,7 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://books_db_krdw_user:FNSaXb8HHsI01wZQOgtM6Nc5ZTckk7BI@dpg-cp2jlnnsc6pc73a6v4f0-a.oregon-postgres.render.com/books_db_krdw")
+DATABASES["default"] = dj_database_url.parse("postgres://books_db_s3h9_user:xgWgSsP11mr9YeFDUgrrwCkJjNHSjpJp@dpg-cp36r2vsc6pc73fk5rm0-a.oregon-postgres.render.com/books_db_s3h9")
 
 
 # Password validation
