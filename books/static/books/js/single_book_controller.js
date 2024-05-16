@@ -112,5 +112,5 @@ function unborrowed_book(){
 fetch_data()
 
 function editThisBook(id) {
-    window.location.href = `http://127.0.0.1:8000/books/edit-book/${id}`;
+    window.location.href = `../books/edit-book/${id}`;
   }
