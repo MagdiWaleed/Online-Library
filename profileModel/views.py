@@ -28,7 +28,7 @@ def login(request):
             "password": str(user.password),
             "isAdmin":str(user.is_admin),
             "id":str(user.id),
-             }
+            }
             context ={"data":item}
             
         except Exception as e:

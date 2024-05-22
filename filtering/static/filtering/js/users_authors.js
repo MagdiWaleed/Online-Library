@@ -1,10 +1,10 @@
 
 function goToSingleMember(row){
     if (row.memberid=="#"){
-        window.location.href=`../filtering/authors/${row.membername}`
+        window.location.href=`/filtering/authors/${row.membername}`
         }
     else{
-        window.location.href=`../filtering/users/${row.memberid}`
+        window.location.href=`/filtering/users/${row.memberid}`
         }
     }
 
@@ -15,7 +15,13 @@ function goToSingleMember(row){
         if (textString.length==0){
         }
         else{
-          window.location.href=`../filtering/${userType}/searching/${textString}/`;
+          window.location.href=`/filtering/${userType}/searching/${textString}/`;
         }
         }
+
+    function fetch(){
+        textString= localStorage.getItem('search');
+        document.getElementById("search").placeholder=textString;
+    }
     
+fetch();

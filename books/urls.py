@@ -13,6 +13,7 @@ from .views import (
     addNewBook,
     getSingleBookUserId,
     goToNotAuthorized,
+    getBookImage,
     )
 
 urlpatterns = [
@@ -29,4 +30,5 @@ urlpatterns = [
     path("books/add-edit-book/add-new-book",addNewBook,name="add-new-book"),
     path("books/<pk>/single-book-user-id",getSingleBookUserId,name="single-book-user-id"),
     path("not-authorized/",goToNotAuthorized,name="not-authorized"),
+    path("books/<int:book_id>/image/", getBookImage, name="get-book-image"),
 ]

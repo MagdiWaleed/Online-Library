@@ -5,13 +5,16 @@
 {% block links %}
 {% endblock links %}
 
+{% block title %}  
+<title>Member Books</title>
+{% endblock title %}
 
 {% block content %}
 <main>
   <script> 
     user = JSON.parse(localStorage.getItem('user'));
     if(user.isAdmin=="False"){
-      window.location.href = "../not-authorized/";
+      window.location.href = "/not-authorized/";
     }
   </script>
     <div style="height: 20px;"></div>
@@ -28,7 +31,7 @@
         {% for book in data %}
         
         <div class="book_details" onclick="goToSingleBook({{book.id}})">
-            <img src="/media/{{book.img}}" alt="IMAGE-NOT-FOUND" class="book_image" >
+            <img src="/books/{{book.id}}/image" alt="IMAGE-NOT-FOUND" class="book_image" >
             <h4>{{book.title}}</h4>
             <p>By: {{book.author_name}}</p>
         </div>

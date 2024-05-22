@@ -82,7 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
       formData.append('about_author', document.getElementById('input_about_author').value);
       formData.append('category', document.getElementById('input_book_category').value);
       formData.append('image', document.getElementById('image').files[0]);
-      formData.append('trending_check', document.getElementById('trending_check').checked? "True":"False");
+      checkValue=document.getElementById('trending_check').checked? "True":"False";
+      alert(checkValue);
+      formData.append('trending_check',checkValue );
 
      
       var xhr = new XMLHttpRequest();
@@ -90,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (xhr.readyState === XMLHttpRequest.DONE) {
               if (xhr.status === 200) {
                   alert(xhr.responseText);
-                  window.location.href="../"
+                  window.location.href="/"
               } else {
                   alert('Error: ' + xhr.statusText);
                 //   location.reload();
