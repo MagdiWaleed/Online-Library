@@ -8,6 +8,8 @@ from django.core.exceptions import ValidationError,ObjectDoesNotExist
 from filtering.views import removeSpaces
 import os
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 # Create your views here.
@@ -166,6 +168,7 @@ def getBookForEdit(request,pk):
     }
     print(data)
     return render(request,'books/edit_single_book.html',{'data':data})
+@csrf_exempt
 def deleteBook(request):
     if request.method == 'POST':
        
@@ -186,7 +189,7 @@ def deleteBook(request):
         except (ValidationError, Exception) as e:
             return JsonResponse({'status': 'error', 'message': str(e)})
 
-
+@csrf_exempt
 def changeBookData(request):
     if request.method == 'POST':
         try:
@@ -228,7 +231,7 @@ def changeBookData(request):
             return JsonResponse({'status': 'Success', 'Message': 'Book added successfully'})
         except (ValidationError, Exception) as e:
             return JsonResponse({'status': 'Success', 'Message': "Book Was Add successfully"})
-
+@csrf_exempt
 def addNewBook(request):
     if request.method == 'POST':
         try:
