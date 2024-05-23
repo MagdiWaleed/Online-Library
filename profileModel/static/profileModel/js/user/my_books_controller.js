@@ -59,7 +59,7 @@ function getMyBooks(){
                 console.log(e.img)
                   document.getElementById("bookshelves").innerHTML+=`
                     <div class="book_details" onclick="goToSingleBook(${e.id})">
-                        <img src="/media/${e.img}" alt="IMAGE-NOT-FOUND" class="book_image" >
+                        <img src="/books/${e.id}/image" alt="IMAGE-NOT-FOUND" class="book_image" >
                         <h4>${e.title}</h4>
                         <p>By: ${e.author_name}</p>
                     </div>`

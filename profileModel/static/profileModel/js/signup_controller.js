@@ -31,6 +31,7 @@ function signpress(){
         $.ajax({
             type: 'POST',
             url: "/profile/register-new-user/",
+            credentials: 'include',
             data: {
                 username: username.value,
                 password: password.value,
@@ -47,7 +48,7 @@ function signpress(){
                 else{
                       user= response.data
                 localStorage.setItem("user",JSON.stringify(user))
-                window.location.href="../" 
+                window.location.href="/" 
                 }
              
             },

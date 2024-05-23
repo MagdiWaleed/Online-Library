@@ -1,6 +1,6 @@
 
 function addNewBook(){
-        window.location.href= '../books/add-edit-book/'
+        window.location.href= '/books/add-edit-book/'
    }
 
 

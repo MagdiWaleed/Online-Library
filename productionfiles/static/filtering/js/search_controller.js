@@ -24,7 +24,7 @@ bookShelves= document.getElementById("bookshelves")
 */
 // function getTheBooks (){
 //     searchText = document.getElementById("search").value;
-//     window.location.href=`../filtering/searching/${searchText}`;
+//     window.location.href=`/filtering/searching/${searchText}`;
 //     bookCardsList=[]
 //     $.ajax({
 //       type: 'GET',
@@ -36,7 +36,7 @@ bookShelves= document.getElementById("bookshelves")
 //           console.log(e.img)
 //             temp+=`
 //               <div class="book_details" onclick="goToSingleBook(${e.id})">
-//                   <img src="/media/${e.img}" alt="IMAGE-NOT-FOUND" class="book_image" >
+//                   <img src="/books/${e.id}/image" alt="IMAGE-NOT-FOUND" class="book_image" >
 //                   <h4>${e.title}</h4>
 //                   <p>By: ${e.author_name}</p>
 //               </div>`
@@ -72,7 +72,7 @@ localStorage.setItem("search",textString);
 if (textString.length==0){
 }
 else{
-  window.location.href=`../filtering/searching/${textString}`;
+  window.location.href=`/filtering/searching/${textString}`;
 }
 }
 

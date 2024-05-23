@@ -62,12 +62,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / "templates",
-                 BASE_DIR / "books" / "templates",
-                 BASE_DIR / "filtering" / "templates",
-                 BASE_DIR / "profileModel" / "templates"
-
-                 
-                 ],
+                BASE_DIR / "books" / "templates"
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,7 +89,7 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgres://books_db_s3h9_user:xgWgSsP11mr9YeFDUgrrwCkJjNHSjpJp@dpg-cp36r2vsc6pc73fk5rm0-a.oregon-postgres.render.com/books_db_s3h9")
+DATABASES["default"] = dj_database_url.parse("postgres://books_db_exzt_user:YDGBTRQ6jXAxEuXzM6Q3v7FlfogPNkGA@dpg-cp76c0vsc6pc73a4uc7g-a.oregon-postgres.render.com/books_db_exzt")
 
 
 # Password validation

@@ -22,7 +22,6 @@ function getCookie(name) {
       success:function(response){
         data= response.data
         localStorage.setItem("book_id",data.book_id),
-        alert(localStorage.getItem("book_id"))
         user=JSON.parse(localStorage.getItem("user"))
         if(user.isAdmin=="True"){
             document.getElementById("borrowed_unborrowed").innerHTML=`
@@ -67,10 +66,7 @@ function borrowed_book(){
         },
         success: function(response) {
           alert("you have borrowed this book","have fun")
-          document.getElementById("borrowed_unborrowed").innerHTML=`
-          <div style="display: flex; justify-content: right; ">
-          <button class="normal_button edit_button" style="width: 200px; margin-top: 20px;" onclick="unborrowed_book()">Unborrowed This Book</button>
-          </div>` ;
+          window.location.href = "/"
         },
         error: function(error) {
             console.log("error ", error);
@@ -88,11 +84,9 @@ function unborrowed_book(){
           csrfmiddlewaretoken: csrfToken,
         },
         success: function(response) {
-          console.log(response.data)
-          document.getElementById("borrowed_unborrowed").innerHTML=`
-          <div style="display: flex; justify-content: right; ">
-          <button class="normal_button edit_button" style="width: 200px; margin-top: 20px;" onclick="borrowed_book()">Borrowed This Book</button>
-          </div>`;
+          alert("you have unborrowed this book")
+          window.location.href = "/"
+
         },
         error: function(error) {
             console.log("error ", error);
@@ -112,5 +106,5 @@ function unborrowed_book(){
 fetch_data()
 
 function editThisBook(id) {
-    window.location.href = `../books/edit-book/${id}`;
+    window.location.href = `/books/edit-book/${id}`;
   }

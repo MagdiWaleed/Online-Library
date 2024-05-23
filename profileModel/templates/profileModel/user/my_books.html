@@ -8,12 +8,16 @@
 
 {% endblock links %}
 
+{% block title %}  
+<title>My Books</title>
+{% endblock title %}
+
 {% block content %}
 <main>
   <script> 
     user = JSON.parse(localStorage.getItem('user'));
     if(user.isAdmin=="True"){
-      window.location.href = "../not-authorized/";
+      window.location.href = "/not-authorized/";
     }
   </script>
     <div id="popup" class="login">
