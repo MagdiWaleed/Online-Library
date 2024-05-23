@@ -20,6 +20,15 @@ var outputElement5 = document.getElementById('book_category');
 inputField5.value = outputElement5.innerHTML;
 
 
+if(document.getElementById('trending_check').value=="True")
+{
+document.getElementById('trending_check').checked=true
+
+}else{
+  document.getElementById('trending_check').checked=false
+}
+
+
 
 inputField.addEventListener('input', function() {
     outputElement.innerText = inputField.value;
@@ -78,9 +87,9 @@ function getCookie(name) {
 function savechanges(){
   var csrftoken = getCookie('csrftoken');
   var book_id = JSON.parse(localStorage.getItem("book"))
-  var url = "../books/edited-book/" 
+  var url = "/books/edited-book/" 
   var fileInput = document.getElementById('image_input').files[0];
- var formData = new FormData()
+  var formData = new FormData()
   formData.append("book_name",inputField.value)
   formData.append("author_name",inputField2.value)
   formData.append("book_description",inputField3.value)
@@ -89,6 +98,8 @@ function savechanges(){
   formData.append("about_author",inputField4.value)
   formData.append("book_id",book_id)
   formData.append("image",fileInput)
+  formData.append('trending_check', document.getElementById('trending_check').checked? "True":"False");
+
 
 
   var xhr = new XMLHttpRequest();
@@ -96,7 +107,7 @@ function savechanges(){
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
               alert(xhr.responseText);
-              window.location.href="../"
+              window.location.href="/"
               
               
           } else {
@@ -113,7 +124,7 @@ function deleteThisBook() {
   var csrftoken = getCookie('csrftoken');
   var book_id = localStorage.getItem("book_id");
   
-  var url = "../books/delete-book/"
+  var url = "/books/delete-book/"
   $.ajax({
     type: "POST",
     url: url,
@@ -123,7 +134,7 @@ function deleteThisBook() {
     },
     success: function(response) {
       alert(response.status)
-      window.location.href = "http://127.0.0.1:8000"
+      window.location.href = "/"
     },
     error: function(error) {
         console.log("error ", error);

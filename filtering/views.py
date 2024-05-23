@@ -7,14 +7,15 @@ from profileModel.models import ProfileModel
 # Create your views here.
 def search(request, searchingText):
     books_by_title = Book.objects.filter(title__icontains=searchingText)
-    books_by_description = Book.objects.filter(description__icontains=searchingText)
+    books_by_description = Book.objects.filter(category__icontains=searchingText)
     books_by_author = Book.objects.filter(author_name__icontains=searchingText)
     
     books = list(books_by_title) + list(books_by_description) + list(books_by_author)
     
     books = list(set(books))
-    print("books: ",books)
+    
     data = []
+    context={}
     for book in books:
         isborrowed =""
         if book.user== None:
@@ -25,14 +26,16 @@ def search(request, searchingText):
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
-            'img': str(book.img),
+            'img': str("/books/"+ book.id +"/image"),
             'isborrowed':str(isborrowed),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),
         }
         data.append(item)
-    print(len(data))
-    context = {"data": data}
+    if len(data)== 0:
+        context={"data" : "no data"}
+    else:
+        context = {"data": data}
     return render(request, 'filtering/search.html', context)
 
 def getBorrowedBooks(request):
@@ -59,6 +62,14 @@ def getBorrowedBooks(request):
     context= {"data":data}
     return render(request,'filtering/borrowed_books.html',context)
 
+def removeSpaces(string):
+    new_string=""
+    string = string.split()
+    for i in string:
+        new_string+=i+" "
+        print(f"{new_string}")
+    return new_string[:-1]
+
 def getMembersBooks(request,members):
     data=[]
     if members== "users":
@@ -73,10 +84,13 @@ def getMembersBooks(request,members):
             data.append(item)
     elif members=="authors":
         books_by_author = Book.objects.all()
-        authors= [t.author_name for t in books_by_author]
+        authors= [removeSpaces(t.author_name) for t in books_by_author]
         authors= list(set(authors))
+        print(f"{len(authors)}")
         for author in authors:
-            books=Book.objects.filter(author_name=author)
+           
+            books=Book.objects.filter(author_name__icontains=author)
+            print(f"{author} -----> {len(books)}")
             item={
                 "memberid":"#",
                 "membername":str(author),
@@ -98,7 +112,6 @@ def getMembersBooks(request,members):
             "data":data,
             "userType":"authors"
             }
-    print(context)
     return render(request,"filtering/users_authors.html",context)
 
 def getUserBooks(request,id):
@@ -110,7 +123,7 @@ def getUserBooks(request,id):
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
-            'img': str(book.img),
+            'img': str("/books/"+ book.id +"/image"),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),
         }
@@ -123,14 +136,15 @@ def getUserBooks(request,id):
     return render(request,"filtering/single_user_author.html",context)
 
 def getAuthorBooks(request,author_name):
-    books= Book.objects.filter(author_name=author_name)
+    author_name= removeSpaces(author_name)
+    books= Book.objects.filter(author_name__icontains=author_name)
     data = []
     for book in books:
         item = {
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
-            'img': str(book.img),
+            'img': str("/books/"+ book.id +"/image"),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),
            
@@ -146,6 +160,7 @@ def getAuthorBooks(request,author_name):
 
 def searchingAboutUsers(request,searchingText):
     data=[]
+    context ={}
     users= ProfileModel.objects.filter(username__icontains=searchingText)
     for user in users:
         books=Book.objects.filter(user=user)
@@ -160,7 +175,10 @@ def searchingAboutUsers(request,searchingText):
             data[t]["isEven"]="True"
         else:
             data[t]["isEven"]="False"
-    context= {"data":data}
+    if len(data)==0:
+        context= {"data": "no data","userType":"users"}
+    else:
+        context= {"data":data }
     return render(request,"filtering/users_authors.html",context) 
 
 def searchingAboutAuthors(request,searchingText):
@@ -186,5 +204,8 @@ def searchingAboutAuthors(request,searchingText):
             data[t]["isEven"]="True"
         else:
             data[t]["isEven"]="False"
-    context= {"data":data}
+    if len(data)==0:
+        context= {"data": "no data" , "userType":"authors"}
+    else:
+        context= {"data":data }
     return render(request,"filtering/users_authors.html",context) 

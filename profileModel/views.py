@@ -3,13 +3,15 @@ from .models import ProfileModel
 from books.models import Book 
 from django.http import JsonResponse
 from django.db import IntegrityError
+from django.views.decorators.csrf import csrf_exempt
+
 
 # Create your views here.
 
 def myProfile(request):
   
     return render(request, 'profileModel/my_information.html',  )
-
+@csrf_exempt
 def login(request):
     context={}
     if request.method=="POST":
@@ -28,21 +30,21 @@ def login(request):
             "password": str(user.password),
             "isAdmin":str(user.is_admin),
             "id":str(user.id),
-             }
+            }
             context ={"data":item}
             
         except Exception as e:
             context = {"data": "no member"}
     print(context)       
     return JsonResponse(context)
-
+@csrf_exempt
 def deleteAccount(request):
     if request.method=="POST":
         user_id= request.POST["user_id"]
         print(user_id)
         ProfileModel.objects.filter(pk=user_id).delete()
     return JsonResponse({"data": "Your account has been removed"})
-
+@csrf_exempt
 def numBooks(request):
     context={}
     if request.method=="POST":
@@ -54,7 +56,7 @@ def numBooks(request):
 
 def myBookList(request):
     return render(request,"profileModel/user/my_books.html")
-
+@csrf_exempt
 def getMyBooks(request):
     context={}
     if request.method== "POST":
@@ -78,7 +80,7 @@ def getMyBooks(request):
            "data":"some error occur" 
         }
     return JsonResponse(context)
-
+@csrf_exempt
 def borrowed_book(request):
     context={}
     if request.method == "POST":
@@ -90,7 +92,7 @@ def borrowed_book(request):
         book.save()
         context={"data":"success"}
     return JsonResponse(context)
-
+@csrf_exempt
 def unborrowed_book(request):
     context={}
     if request.method == "POST":
@@ -106,7 +108,7 @@ def signup(request):
     return render(request,"profileModel/signup.html")
 
 
-
+@csrf_exempt
 def registerNewUser(request):
     context={}
     if request.method=="POST":
@@ -145,7 +147,7 @@ def registerNewUser(request):
                     "data": "Username already exists."
                 }
     return JsonResponse(context)
-
+@csrf_exempt
 def updateUser(request):
     context={}
     if request.method=="POST":

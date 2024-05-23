@@ -2,10 +2,13 @@
 {% load static %}
 
 {% block links %}
-<link rel="stylesheet" href="{% static "css/about_style.css" %}">
+<link rel="stylesheet" href="{% static 'css/about_style.css' %}">
 
 {% endblock links %}
 
+{% block title %}  
+<title>About Rome Library</title>
+{% endblock title %} 
 {% block content %}
 <main>
   <form id="popup" class="login">
