@@ -123,7 +123,7 @@ def registerNewUser(request):
             isAdmin= True
             print(isAdmin)
         try:
-            newUser= ProfileModel(
+            newUser= ProfileModel.objects.create(
                 username=username,
                 password=password,
                 email=email,
@@ -146,8 +146,6 @@ def registerNewUser(request):
                 context = {
                     "data": "Username already exists."
                 }
-
-
     return JsonResponse(context)
 @csrf_exempt
 def updateUser(request):
