@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tex^&!rfwcj5$(rm22329i83*k0&ou&cr1)l%rc=@ohsqb+aqk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app', 'almahil.com.app', '*.app', '.almahil.app','library.almahil.com', '127.0.0.1', 'localhost', '.now.sh', 'render.com', '*']
 
