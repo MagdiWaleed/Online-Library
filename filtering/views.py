@@ -26,6 +26,7 @@ def search(request, searchingText):
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
+
             'isborrowed':str(isborrowed),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),

@@ -12,7 +12,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         book_data = [
-
     {
         "title": "Good Rich People",
         "description": "Lyla has always believed that life is a game she is destined to win, but her husband, Graham, takes the game to dangerous levels. The wealthy couple invites self-made success stories to live in their guesthouse and then conspires to ruin their lives. After all, there is nothing worse than a bootstrapper.",
@@ -189,7 +188,6 @@ class Command(BaseCommand):
     "category": "Psychology",
     "img": get_image('Everything is Fcked.jpg')
 }
-
 
 
     ]
