@@ -26,7 +26,7 @@ def search(request, searchingText):
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
-            'img': str("/books/"+ book.id +"/image"),
+
             'isborrowed':str(isborrowed),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),
@@ -123,7 +123,6 @@ def getUserBooks(request,id):
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
-            'img': str("/books/"+ book.id +"/image"),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),
         }
@@ -144,7 +143,6 @@ def getAuthorBooks(request,author_name):
             'id': str(book.id),
             'title': str(book.title),
             'description': str(book.description),
-            'img': str("/books/"+ book.id +"/image"),
             'author_name': str(book.author_name),
             'about_author': str(book.about_author),
            
